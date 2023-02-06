@@ -1,0 +1,51 @@
+.PrimaryNavbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px 0 40px;
+    height: 100%;
+    .SearchBar{
+        display: flex;
+        .faMagnifyingGlass{
+            margin: 13px -30px 0 0;
+            z-index: 1;
+            color: #D1D5DB;
+        }
+        input[type=search]{
+            width: 500px;
+            height: 40px;
+            color: #D1D5DB;
+            border: 1px solid #D1D5DB;
+            border-radius: 6px;
+            outline: none;
+            padding: 0 20px 0 40px;
+        }
+    }
+    img{
+        width: 144px;
+        height: 61px;
+    }
+    .AuthButton{
+        height: 100%;
+        Button{
+            margin: 0 5px;
+        }
+    }
+}
+
+.SecondaryNavbar{
+    display: flex;
+    padding: 20px 40px 0 40px;
+    .nav-pills{
+        padding: 0 10px;
+        .nav-link{
+            color: black;
+        }
+        .active, .nav-pills .show > .nav-link {
+            background-color: #C3CEE7;
+            color: #002087;
+        }
+    }
+    .nav-link{
+        color: black;
+    }
+}
