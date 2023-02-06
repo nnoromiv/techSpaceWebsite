@@ -1,0 +1,24 @@
+.Content {
+    text-align: center;
+    padding: 20px 0 0 0;
+    h1{
+        color: black;
+        font-size: 56px;
+        font-weight: bolder;
+        span{
+            color: #C10A28
+        }
+    }
+    p{
+        font-size: 20px;
+        font-weight: 100;
+    }
+    Button{
+        width: 182px;
+        height: 62px;
+        border-radius: 6px;
+        border: 1px solid white;
+        background: linear-gradient(93.85deg, #002087 1.32%, rgba(193, 10, 40, 0.7) 98.17%);
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.06);
+    }
+}
