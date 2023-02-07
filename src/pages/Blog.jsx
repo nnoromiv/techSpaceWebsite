@@ -12,19 +12,19 @@ const BLOGCARD = [
     {
         image: 'images/blogimg.png',
         date: '13-JAN-2023',
-        title: 'Story Headline',
+        title: 'Story Headline2',
         shortText: 'Lorem ipsum dolor sit amet consectetur. Rhoncus ut dictum urna faucibus elit feugiat. Et dignissim in ut tellus vitae venenatis eget varius vestibulum.',
     },
     {
         image: 'images/blogimg.png',
         date: '13-JAN-2023',
-        title: 'Story Headline',
+        title: 'Story Headline3',
         shortText: 'Lorem ipsum dolor sit amet consectetur. Rhoncus ut dictum urna faucibus elit feugiat. Et dignissim in ut tellus vitae venenatis eget varius vestibulum.',
     },
     {
         image: 'images/blogimg.png',
         date: '13-JAN-2023',
-        title: 'Story Headline',
+        title: 'Story Headline4',
         shortText: 'Lorem ipsum dolor sit amet consectetur. Rhoncus ut dictum urna faucibus elit feugiat. Et dignissim in ut tellus vitae venenatis eget varius vestibulum.',
     }
 ]

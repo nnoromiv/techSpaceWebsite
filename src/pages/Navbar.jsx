@@ -28,7 +28,7 @@ const PrimaryNavbar = () => {
     )
 }
 
-const SECONDARYNAVBARMENU = [
+export const SECONDARYNAVBARMENU = [
     {
         href: '/home',
         link: 'Home'
@@ -70,12 +70,20 @@ const SECONDARYNAVBARMENU = [
         link: 'Gallery'
     },
     {
-        href: '/aboutus',
+        href: '/about-us',
         link: 'About us'
     },
     {
         href: '/faq',
         link: 'FAQ'
+    },
+    {
+        href: '/about-stacks',
+        link: 'About Stacks'
+    },
+    {
+        href: '/contact',
+        link: 'Contact'
     },
 ]
 
@@ -105,7 +113,7 @@ const SecondaryNavbar = () => {
            }
         </NavDropdown>
         {
-            SECONDARYNAVBARMENU.slice(7,).map(navbarmenu => {
+            SECONDARYNAVBARMENU.slice(7,12).map(navbarmenu => {
                 return(
                     <Nav variant='pills' defaultActiveKey="/home" color='#C3CEE7' key={navbarmenu.href}>
                         <Nav.Item>

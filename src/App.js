@@ -8,6 +8,7 @@ import Stacks from './pages/Stacks';
 import Blog from './pages/Blog';
 import FAQ from './pages/FAQ';
 import Banner from './pages/Banner';
+import Footer from './pages/Footer';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Blog />
       <FAQ />
       <Banner />
+      <Footer />
     </div>
   );
 }

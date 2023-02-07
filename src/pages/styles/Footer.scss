@@ -1,0 +1,92 @@
+.FooterHead {
+    background-color: #002087;
+    margin: 10px 0 0 0;
+    padding: 40px;
+    align-items: center;
+    .GridFooterHead{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        .Getintouch{
+            display: flex;
+            flex-direction: column;
+            gap: 100px;
+            div{
+                color: white;
+                h3{
+                    font-size: 22px;
+                    font-weight: 600;
+                }
+                p{
+                    font-size: 18px;
+                    opacity: 0.7;
+                    text-decoration: underline;
+                }
+            }
+        }
+        div{
+            color: white;
+                h3{
+                    font-size: 22px;
+                    font-weight: 600;
+                }
+                p{
+                    font-size: 18px;
+                    opacity: 0.7;
+                }
+        }
+        .Mailus{
+            #email{
+                margin: 20px 0 0 0;
+                .form-control{
+                    background-color: #002087;
+                    border-radius: 0;
+                    border: 0;
+                    border-bottom: 1px solid gray;
+                }
+            }
+            #checkbox{
+                margin: 20px 0 0 0;
+                display: grid;
+                grid-template-columns: 10% 90%;
+                span{
+                    padding: 0 0;
+                    width: fit-content;
+                    height: fit-content;
+                }
+            }
+            Button{
+                margin: 20px 0 0 0;
+                border-radius: 0;
+                border: 1px solid white;
+                background-color: white;
+                color: black;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+.FooterTail{
+    display: flex;
+    background-color: #002087;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+    h2{
+        font-weight: 600;
+        font-size: 18px;
+        color: white;
+        margin: 10px 0 0 0;
+    }
+    .FooterMenu{
+        display: flex;
+        .nav-pills{
+            .nav-link{
+                color: white;
+            }
+        }
+    }
+    #nav-socials {
+        display: flex;
+    }
+}
