@@ -5,6 +5,7 @@ import Navbar from './pages/Navbar';
 import Partners from './pages/Partners';
 import Aboutus from './pages/Aboutus';
 import Stacks from './pages/Stacks';
+import Blog from './pages/Blog';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Partners />
       <Aboutus />
       <Stacks />
+      <Blog />
     </div>
   );
 }
