@@ -6,6 +6,7 @@ import Partners from './pages/Partners';
 import Aboutus from './pages/Aboutus';
 import Stacks from './pages/Stacks';
 import Blog from './pages/Blog';
+import FAQ from './pages/FAQ';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Aboutus />
       <Stacks />
       <Blog />
+      <FAQ />
     </div>
   );
 }
