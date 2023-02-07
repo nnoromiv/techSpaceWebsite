@@ -1,0 +1,17 @@
+.Banner{
+    background-color: #C3CEE7;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    h1{
+        font-size: 40px;
+        font-weight: 800;
+        span{
+            color: #002087;
+        }
+    }
+    Button{
+        height: fit-content;
+        margin: 40px 0 0 0;
+    }
+}
