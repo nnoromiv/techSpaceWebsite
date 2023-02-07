@@ -1,0 +1,131 @@
+.Stacks{
+    margin: 80px 100px 0 100px;
+    text-align: center;
+    .Frontend{
+        margin: 80px 0 0 0;
+        display: flex;
+        gap: 132px;
+        text-align: left;
+        img{
+            width: 450px;
+            height: 186.02px;
+            border-radius: 50% 50% 65% 35% / 62% 23% 77% 38% ;
+        }
+        .info{
+            .header{
+                display: flex;
+                h2{
+                    margin: -3px 0 3px 15px;
+                    font-size: 32px;
+                    font-weight: 600;
+                }
+            }
+            p{
+                font-size: 18px;
+                margin: 0 0 20px 0;
+            }
+        }
+    }
+    .UIUX{
+        margin: 80px 0 0 0;
+        display: flex;
+        gap: 132px;
+        text-align: left;
+        flex-direction: row-reverse;
+        img{
+            width: 400px !important;
+            height: 240.92px;
+            border-radius: 57% 43% 59% 41% / 62% 78% 22% 38%   ;
+        }
+        .info{
+            .header{
+                display: flex;
+                h2{
+                    margin: -3px 0 3px 15px;
+                    font-size: 32px;
+                    font-weight: 600;
+                }
+            }
+            p{
+                font-size: 18px;
+                margin: 0 0 20px 0;
+            }
+        }
+    }
+    .Backend{
+        margin: 80px 0 0 0;
+        display: flex;
+        gap: 132px;
+        text-align: left;
+        img{
+            width: 450px !important;
+            height: 240.44px;
+            border-radius: 100% 0% 67% 33% / 62% 30% 70% 38%;
+        }
+        .info{
+            .header{
+                display: flex;
+                h2{
+                    margin: -3px 0 3px 15px;
+                    font-size: 32px;
+                    font-weight: 600;
+                }
+            }
+            p{
+                font-size: 18px;
+                margin: 0 0 20px 0;
+            }
+        }
+    }
+    .DataScience{
+        margin: 80px 0 0 0;
+        display: flex;
+        gap: 132px;
+        text-align: left;
+        flex-direction: row-reverse;
+        img{
+            width: 400px !important;
+            height: 240.92px;
+            border-radius: 65% 35% 76% 24% / 62% 28% 72% 38%;
+        }
+        .info{
+            .header{
+                display: flex;
+                h2{
+                    margin: -3px 0 3px 15px;
+                    font-size: 32px;
+                    font-weight: 600;
+                }
+            }
+            p{
+                font-size: 18px;
+                margin: 0 0 20px 0;
+            }
+        }
+    }
+    .Cybersecurity{
+        margin: 80px 0 0 0;
+        display: flex;
+        gap: 132px;
+        text-align: left;
+        img{
+            width: 450px !important;
+            height: 240.44px;
+            border-radius: 65% 35% 13% 87% / 19% 28% 72% 81%;
+        }
+        .info{
+            .header{
+                display: flex;
+                h2{
+                    margin: -3px 0 3px 15px;
+                    font-size: 32px;
+                    font-weight: 600;
+                }
+            }
+            p{
+                font-size: 18px;
+                margin: 0 0 20px 0;
+            }
+        }
+    }
+}

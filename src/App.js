@@ -4,6 +4,7 @@ import Content from './pages/Content';
 import Navbar from './pages/Navbar';
 import Partners from './pages/Partners';
 import Aboutus from './pages/Aboutus';
+import Stacks from './pages/Stacks';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <MyCarousel />
       <Partners />
       <Aboutus />
+      <Stacks />
     </div>
   );
 }
