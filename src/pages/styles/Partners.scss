@@ -1,0 +1,20 @@
+.Partners {
+    margin: 100px 0 0 0;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #002087;
+    h1{
+        color: white;
+        font-size: 56px;
+        margin: 20px 0 0 0;
+    }
+    .PartnersLogo{
+        display: flex;
+        gap: 120px;
+        img{
+            width: 127px;
+            height: 127px;
+        }
+    }
+}

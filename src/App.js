@@ -2,6 +2,7 @@ import './App.scss';
 import MyCarousel from './pages/MyCarousel';
 import Content from './pages/Content';
 import Navbar from './pages/Navbar';
+import Partners from './pages/Partners';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Navbar />
       <Content />
       <MyCarousel />
+      <Partners />
     </div>
   );
 }
