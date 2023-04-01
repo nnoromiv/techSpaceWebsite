@@ -5,6 +5,7 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import "./styles/Navbar.scss"
 import { Divider } from '@mui/material'
 import { Nav, NavDropdown } from 'react-bootstrap'
+import { slide as Menu } from 'react-burger-menu'
 
 const Logo = () => {
     return (
@@ -24,7 +25,22 @@ const PrimaryNavbar = () => {
             <Button variant='primary' >Sign in</Button>
             <Button variant='outline-primary'>Log in</Button> 
         </div>
+        <HamBurgerMenu />
     </div>
+    )
+}
+
+const HamBurgerMenu = () => {
+    return (
+        <div className='HamBurgerMenu'>
+            <Menu right width={'100%'} >
+                <SecondaryNavbar className='HamBurgerSecondaryNavbar' />
+                <div className='AuthButton'>
+                    <Button variant='primary' >Sign in</Button>
+                    <Button variant='outline-primary'>Log in</Button> 
+                </div>
+            </Menu>
+        </div>
     )
 }
 
@@ -87,9 +103,9 @@ export const SECONDARYNAVBARMENU = [
     },
 ]
 
-const SecondaryNavbar = () => {
+const SecondaryNavbar = (props) => {
     return (
-        <Nav className='SecondaryNavbar'>
+        <Nav className={props.className}>
         {
             SECONDARYNAVBARMENU.slice(0,2).map(navbarmenu => {
                 return(
@@ -132,7 +148,7 @@ const Navbar = () => {
     <header>
         <PrimaryNavbar />
         <Divider variant="middle" color='#E5E7EB'/>
-        <SecondaryNavbar />
+        <SecondaryNavbar className='SecondaryNavbar' />
     </header>
   )
 }
