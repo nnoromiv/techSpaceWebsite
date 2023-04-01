@@ -128,4 +128,191 @@
             }
         }
     }
+
+    @media only screen and (max-width: 1025px){
+        margin: 80px 50px 0 50px;
+        .Frontend{           
+            gap: 30px;           
+        }
+        .UIUX{          
+            gap: 30px;
+        }
+        .Backend{
+            gap: 30px;        
+        }
+        .DataScience{           
+            gap: 30px;
+        }
+        .Cybersecurity{           
+            gap: 30px;
+        }
+    }
+
+    @media only screen and (max-width: 769px){
+        margin: 60px 20px 0 20px;
+        .Frontend{            
+            img{
+                width: 350px;
+            }
+            .info{
+                .header{                   
+                    h2{
+                        font-size: 20px;
+                    }
+                }
+                p{
+                    font-size: 16px;
+                }
+            }
+        }
+        .UIUX{            
+            img{
+                width: 300 !important;           
+            }
+            .info{
+                .header{                   
+                    h2{
+                        font-size: 20px;
+                    }
+                }
+                p{
+                    font-size: 16px;
+                }
+            }
+        }
+        .Backend{            
+            img{
+                width: 350px !important;          
+            }
+            .info{
+                .header{                   
+                    h2{
+                        font-size: 20px;
+                    }
+                }
+                p{
+                    font-size: 16px;
+                }
+            }
+        }
+        .DataScience{
+            img{
+                width: 300px !important;               
+            }
+            .info{
+                .header{                   
+                    h2{
+                        font-size: 20px;
+                    }
+                }
+                p{
+                    font-size: 16px;
+                }
+            }
+        }
+        .Cybersecurity{
+            img{
+                width: 350px !important;              
+            }
+            .info{
+                .header{                   
+                    h2{
+                        font-size: 20px;
+                    }
+                }
+                p{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 600px){
+        margin: 60px 20px 0 20px;
+        .Frontend{    
+            flex-direction: column;        
+        }
+        .UIUX{     
+            img{               
+                height: 200.92px;
+            }      
+            flex-direction: column;
+        }
+        .Backend{      
+            img{               
+                height: 200.92px;
+            }        
+            flex-direction: column;
+        }
+        .DataScience{
+            img{               
+                height: 200.92px;
+            }  
+            flex-direction: column;
+        }
+        .Cybersecurity{
+            img{               
+                height: 200.92px;
+            }  
+            flex-direction: column;
+        }
+    }
+
+    @media only screen and (max-width: 426px){
+        padding: 0 10px 0 10px;
+        .Frontend{  
+            img{               
+                width: 300.92px !important;
+            }             
+        }
+        .UIUX{     
+             img{               
+                width: 300.92px !important;
+            }      
+        }
+        .Backend{      
+             img{               
+                width: 300.92px !important;
+            }        
+        }
+        .DataScience{
+             img{               
+                width: 300.92px !important;
+            }    
+        }
+        .Cybersecurity{
+             img{               
+                width: 300.92px !important;
+            }    
+        }
+    }
+
+    @media only screen and (max-width: 330px){
+        padding: 0 10px 0 10px;
+        .Frontend{  
+            img{               
+                width: 250.92px !important;
+            }             
+        }
+        .UIUX{     
+             img{               
+                width: 250.92px !important;
+            }      
+        }
+        .Backend{      
+             img{               
+                width: 250.92px !important;
+            }        
+        }
+        .DataScience{
+             img{               
+                width: 250.92px !important;
+            }    
+        }
+        .Cybersecurity{
+             img{               
+                width: 250.92px !important;
+            }    
+        }
+    }
 }
