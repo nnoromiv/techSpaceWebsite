@@ -9,23 +9,23 @@ const InstagramIcon = 'https://img.icons8.com/material-outlined/ffffff/30/instag
 const GithubIcon = 'https://img.icons8.com/ios-glyphs/ffffff/30/github.png'
 const TwitterIcon = 'https://img.icons8.com/ios-filled/ffffff/30/null/twitter.png'
 const LinkedInIcon = 'https://img.icons8.com/ios-filled/ffffff/30/linkedin-2.png'
-const FacebookIcon = 'https://img.icons8.com/ios-glyphs/ffffff/30/facebook-f.png'
+const YoutubeIcon = 'https://img.icons8.com/ios-filled/ffffff/40/youtube-play--v1.png'
 
 const SOCIALS = [
     {
         name: 'instagram',
         src: `${InstagramIcon}`,
-        hrf: ''
+        hrf: 'https://instagram.com/runtechspace?igshid=YmMyMTA2M2Y='
     },
     {
         name: 'github',
         src: `${GithubIcon}`,
-        hrf: ''
+        hrf: 'https://github.com/RUN-TECH-SPACE'
     },
     {
         name: 'twitter',
         src: `${TwitterIcon}`,
-        hrf: ''
+        hrf: 'https://twitter.com/RunTechSpace_?t=GAP34g337qfcCsQYbS_cCw&s=09'
     },
     {
         name: 'linkedin',
@@ -33,8 +33,8 @@ const SOCIALS = [
         hrf: ''
     },
     {
-        name: 'facebook',
-        src: `${FacebookIcon}`,
+        name: 'youtube',
+        src: `${YoutubeIcon}`,
         hrf: ''
     }
 ]
@@ -46,7 +46,7 @@ function Socials(){
         SOCIALS.map((social) => {
             return (
                 <div className={social.name} key={social.name} style={{ padding: '0 10px'}}>
-                    <a href={social.hrf} >
+                    <a href={social.hrf} target='_blank' rel='noreferrer'>
                     <img srcSet='' alt={social.name} src={social.src} color='white'/>  
                     </a>                                
                 </div>

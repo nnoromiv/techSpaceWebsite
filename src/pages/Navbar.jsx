@@ -30,7 +30,7 @@ const PrimaryNavbar = () => {
 
 export const SECONDARYNAVBARMENU = [
     {
-        href: '/home',
+        href: '/',
         link: 'Home'
     },
     {
@@ -58,7 +58,7 @@ export const SECONDARYNAVBARMENU = [
         link: 'UI/UX Development'
     },
     {
-        href: '/blog',
+        href: '#blog',
         link: 'Blogs'
     },
     {
@@ -74,11 +74,11 @@ export const SECONDARYNAVBARMENU = [
         link: 'About us'
     },
     {
-        href: '/faq',
+        href: '#FAQ',
         link: 'FAQ'
     },
     {
-        href: '/about-stacks',
+        href: '#about-stacks',
         link: 'About Stacks'
     },
     {
@@ -93,7 +93,7 @@ const SecondaryNavbar = () => {
         {
             SECONDARYNAVBARMENU.slice(0,2).map(navbarmenu => {
                 return(
-                    <Nav variant='pills' activeKey='/home' color='#C3CEE7' key={navbarmenu.href} >
+                    <Nav variant='tabs' activeKey='/' color='#C3CEE7' key={navbarmenu.href} >
                         <Nav.Item>
                             <Nav.Link href={navbarmenu.href} eventKey={navbarmenu.href}>{navbarmenu.link}</Nav.Link>
                         </Nav.Item>
@@ -115,7 +115,7 @@ const SecondaryNavbar = () => {
         {
             SECONDARYNAVBARMENU.slice(7,12).map(navbarmenu => {
                 return(
-                    <Nav variant='pills' defaultActiveKey="/home" color='#C3CEE7' key={navbarmenu.href}>
+                    <Nav variant='tabs' defaultActiveKey="/home" color='#C3CEE7' key={navbarmenu.href}>
                         <Nav.Item>
                             <Nav.Link href={navbarmenu.href}>{navbarmenu.link}</Nav.Link>
                         </Nav.Item>

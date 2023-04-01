@@ -59,7 +59,7 @@ function MyAccordion (){
 
 const FAQ = () => {
   return (
-    <div className='FAQ'>
+    <div className='FAQ' id='FAQ'>
         <h1>Frequently Asked Questions</h1>
         <Divider variant='middle' color='black'/>
         <MyAccordion />

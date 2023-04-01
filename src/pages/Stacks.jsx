@@ -85,7 +85,7 @@ const CybersecurityStack = () => {
 
 const Stacks = () => {
   return (
-    <div className='Stacks'>
+    <div className='Stacks' id='about-stacks'>
         <h1>Stacks</h1>
         <FrontendStack />
         <UIUXStack />

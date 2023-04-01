@@ -53,7 +53,7 @@ function Cards(){
 
 const Blog = () => {
   return (
-    <div className='Blog'>
+    <div className='Blog' id='blog'>
         <div className='header'>
             <h1>Blog</h1>
             <button>More</button>
