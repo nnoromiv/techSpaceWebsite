@@ -31,17 +31,21 @@
         display: none;
     }
     .Card{
-        margin: 80px 100px 0 100px;
-        display: grid;
-        grid-template-columns: repeat(10, 1fr);
+        margin: 40px 50px !important;
         gap: 20px;
         overflow-x: scroll;
-        .card{
-            width: 440px;
-            height: fit-content;
+        overflow-y: hidden;
+
+        .slick-slider,
+        .slick-list {      
+            width: 100vw !important;
         }
+        .card{
+            width: 300px;
+            height: fit-content;
+        }        
         .card-body{
-            background-color: #C3CEE7;
+            background-color: #C3CEE7;            
             .card-subtitle{
                 font-size: 18px;
                 color: #27AE60;
@@ -53,6 +57,109 @@
                 margin: 20px 0;
                 font-size: 24px;
                 text-align: left;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1025px){
+        .header{           
+            margin: 0 50px ;
+            h1{
+                font-size: 54px;               
+            }
+        }
+        p{
+            margin: 10px 50px;
+        }
+        .Card{
+            margin: 40px 50px !important;        
+            .card{
+                width: 250px;
+                height: fit-content;
+            }
+            .card-body{                
+                .card-subtitle{
+                    font-size: 16px;
+                }
+                .card-title{
+                    font-size: 30px;
+                }
+                .card-text{                    
+                    font-size: 22px;                   
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 769px){
+        .header{           
+            margin: 0 30px;
+            h1{
+                font-size: 44px;               
+            }
+        }
+        p{
+            font-size: 15px;
+            margin: 10px 30px;
+        }
+        .Card{
+            margin: 40px 30px !important;        
+            .card{
+                width: 250px !important;
+                height: fit-content;
+            }
+            .card-body{                
+                .card-subtitle{
+                    font-size: 14px;
+                }
+                .card-title{
+                    font-size: 26px;
+                }
+                .card-text{                    
+                    font-size: 18px;                   
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 426px){
+        
+        .Card{    
+            .card{
+                width: 290px !important;
+                height: fit-content;
+            }
+            .card-body{                
+                .card-subtitle{
+                    font-size: 14px;
+                }
+                .card-title{
+                    font-size: 20px;
+                }
+                .card-text{                    
+                    font-size: 16px;                   
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 321px){
+        
+        .Card{    
+            .card{
+                width: 250px !important;
+                height: fit-content;
+            }
+            .card-body{                
+                .card-subtitle{
+                    font-size: 14px;
+                }
+                .card-title{
+                    font-size: 20px;
+                }
+                .card-text{                    
+                    font-size: 16px;                   
+                }
             }
         }
     }
