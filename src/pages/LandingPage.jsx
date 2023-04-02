@@ -11,7 +11,7 @@ import Footer from './LandingPage/Footer';
 
 function LandingPage() {
   return (
-    <div className="App">
+    <div className="LandingPage">
       <Navbar />
       <Content />
       <MyCarousel />

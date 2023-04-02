@@ -1,8 +1,11 @@
 import React from 'react'
+import Navbar from './LandingPage/Navbar';
 
 const EventsPage = () => {
   return (
-    <div>EventsPage</div>
+    <div className="EventsPage">
+        <Navbar />
+    </div>
   )
 }
 
