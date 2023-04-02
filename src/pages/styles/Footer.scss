@@ -64,6 +64,40 @@
             }
         }
     }
+
+    @media only screen and (max-width: 769px){
+        .GridFooterHead{
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            .Getintouch{
+                gap: 50px;
+                div{
+                    h3{
+                        font-size: 20px;
+                    }
+                    p{
+                        font-size: 15px;
+                    }
+                }
+            }
+            div{
+                    h3{
+                        font-size: 20px;
+                    }
+                    p{
+                        font-size: 15px;
+                    }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 601px){
+        padding: 20px;
+        .GridFooterHead{
+            grid-template-columns: repeat(1, 1fr);
+            gap: 30px;
+        }
+    }
 }
 
 .FooterTail{
@@ -88,5 +122,49 @@
     }
     #nav-socials {
         display: flex;
+    }
+
+    @media only screen and (max-width: 769px){
+        display: grid;
+        grid-template-columns: 10% 60% 30%;
+        gap: 10px;
+        h2{
+            margin: 5px 0 0 0;
+            font-size: 10px;
+        }
+        .FooterMenu{
+            .nav-pills{
+                .nav-link{
+                    font-size: 10px;
+                }
+            }
+        }
+        #nav-socials {
+            img{
+                width: 20px !important
+            }
+        }
+    }
+
+    @media only screen and (max-width: 651px){
+        padding: 20px;
+        grid-template-columns: 30% 70% ;
+
+        h2{
+            margin: 5px 0 0 10px;
+        }
+    }
+
+    
+    @media only screen and (max-width: 426px){
+        padding: 10px;
+        grid-template-columns: 100% ;
+    }
+
+    @media only screen and (max-width: 376px){
+        .FooterMenu{
+            display: grid;
+            grid-template-columns: 40% 20% 20% ;
+        }
     }
 }
