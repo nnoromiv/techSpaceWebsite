@@ -1,0 +1,136 @@
+.EventBody{
+    .DateContainer{
+        border: 3px solid white;
+        padding: 20px 40px;
+        width: fit-content;
+        border-radius: 50%;
+        margin: -50px 0 0 10px;
+        position: absolute;
+        z-index: 1;
+        background-color: #002087;
+
+        h1, h3{
+            color: white;
+            font-size: 36px;
+            span{
+                font-size: 20px
+            }
+        }
+    }
+    .Carousel{
+        display: flex;
+        justify-content: center;
+        padding: 0 20px;
+        margin: 80px 20px 0 20px !important;
+        z-index: 0;
+        img {
+            width: 91vw;
+            height: 521px;
+            border-radius: 20px;
+            background:#D9D9D9;
+            object-fit: cover;
+            opacity: 0.7;
+        }
+        .carousel-caption{
+            h3{
+                font-size: 54px;
+            }
+            p{
+                text-align: left;
+            }
+        }
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon{
+            width: 15px;
+            background-color: #002087;
+            margin: 5px 15px;
+            border: 1px solid #002087;
+            border-radius: 20px;
+        }
+        .carousel-indicators {
+            margin: 0 0 -40px 0;
+            transition: 1s;
+            .active{
+                width: 90px !important;
+            }
+            button[type=button] {
+                background-color: #002087;
+                width: 45px;
+                height: 10px;
+                border: 1px solid #002087;
+                border-radius: 20px !important;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1025px){     
+        .DateContainer{
+            padding: 15px 30px;
+    
+            h1, h3{
+                font-size: 32px !important;
+                span{
+                    font-size: 18px;
+                }
+            }
+        }
+        .Carousel{
+            padding: 0;
+            img {
+                width: 96vw;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 769px){ 
+        .DateContainer{
+            padding: 10px 25px;
+    
+            h1, h3{
+                font-size: 28px !important;
+                span{
+                    font-size: 16px;
+                }
+            }
+        }
+        .Carousel{
+            padding: 0 20px;
+            margin: 80px 0 0 0 !important;
+            img {
+                height: 450px;
+                width: 94vw;
+            }
+            .carousel-caption{
+                h3, h2{
+                    font-size: 42px;
+                }
+                p{
+                    text-align: left;
+                }
+            }
+        }    
+    }
+
+    
+    @media only screen and (max-width: 426px){ 
+        .DateContainer{
+            margin: -20px 0 0 5px;
+        }    
+        .Carousel{
+            padding: 0 10px;
+            img {
+                width: 94vw;
+                height: 321px;           
+            }
+            .carousel-caption{
+                h3, h2{
+                    font-size: 18px;
+                }
+                p{
+                    text-align: left;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}

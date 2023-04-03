@@ -4,6 +4,7 @@ import FAQ from './LandingPage/FAQ';
 import Banner from './LandingPage/Banner';
 import Footer from './LandingPage/Footer';
 import EventBody from './EventsPage/EventBody'
+import EventCards from './EventsPage/EventCards';
 
 const EventsPage = () => {
   return (
@@ -11,6 +12,7 @@ const EventsPage = () => {
         <Navbar />
         {/* Main Body */}
             <EventBody />
+            <EventCards />
         {/* Body Ends */}
         <FAQ />
         <Banner />
