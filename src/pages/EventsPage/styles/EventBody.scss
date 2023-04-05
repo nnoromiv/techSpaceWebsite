@@ -137,7 +137,7 @@
 
 .modal-content {
     width: 95vw;
-    margin: 20px 10px 0  10px;
+    margin: 20px 20px 0  20px;
     border-radius: 20px 20px 0 0  !important;
     background-color: #C3CEE7;
     padding: 0 20px;
@@ -162,6 +162,10 @@
         #TicketCheckoutButton{
             width: 100%;
         }
+    }
+
+    @media only screen and (max-width: 1025px){
+        margin: 20px 10px 0  10px;
     }
 
     @media only screen and (max-width: 601px){

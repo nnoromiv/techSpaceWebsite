@@ -1,29 +1,29 @@
-import React from 'react'
-import { Card, Button } from 'react-bootstrap'
+import React, {useState} from 'react'
+import { Card, Button, Form, Modal } from 'react-bootstrap'
 import "./styles/EventCards.scss"
 
 const BLOGCARD = [
     {
         image: 'images/blogimg.png',
-        price: '50000',
+        price: '3000',
         title: 'Story Headline',
         shortText: 'Lorem ipsum dolor sit amet consectetur. Rhoncus ut dictum urna faucibus elit feugiat. Et dignissim in ut tellus vitae venenatis eget varius vestibulum.',
     },
     {
         image: 'images/blogimg.png',
-        price: '50000',
+        price: '40000',
         title: 'Story Headline2',
         shortText: 'Lorem ipsum dolor sit amet consectetur. Rhoncus ut dictum urna faucibus elit feugiat. Et dignissim in ut tellus vitae venenatis eget varius vestibulum.',
     },
     {
         image: 'images/blogimg.png',
-        price: '50000',
+        price: '9000',
         title: 'Story Headline3',
         shortText: 'Lorem ipsum dolor sit amet consectetur. Rhoncus ut dictum urna faucibus elit feugiat. Et dignissim in ut tellus vitae venenatis eget varius vestibulum.',
     },
     {
         image: 'images/blogimg.png',
-        price: '50000',
+        price: '10000',
         title: 'Story Headline4',
         shortText: 'Lorem ipsum dolor sit amet consectetur. Rhoncus ut dictum urna faucibus elit feugiat. Et dignissim in ut tellus vitae venenatis eget varius vestibulum.',
     }
@@ -31,12 +31,23 @@ const BLOGCARD = [
 
 
 function Cards(){
+    const [fullscreen, setFullscreen] = useState(true);
+    const [ticketNumber, setTicketNumber] = useState(1);
+    const [selectedEventIndex, setSelectedEventIndex] = useState(null)
+    const selectedEvent = BLOGCARD[selectedEventIndex]
+
+    function handleOpenModal(breakpoint,index) {
+        setFullscreen(breakpoint)
+        setSelectedEventIndex(index)
+    }
+
     return(        
         <div className='Card'>
                 {
-                    BLOGCARD.map(blogcard => {
+                    BLOGCARD.map((blogcard, idx) => {
                         return (
-                            <Card key={blogcard.title}>
+                            <div key={idx}>
+                            <Card>
                                 <div className='DateContainer'>
                                     <h1>20<span>th</span></h1>
                                     <h3>May</h3>
@@ -46,11 +57,48 @@ function Cards(){
                                     <Card.Title>{blogcard.title}</Card.Title>
                                     <Card.Text>{blogcard.shortText}</Card.Text>
                                     <div style={{ display: 'flex', gap: '20px'}}>
-                                        <Button variant='outline-primary'>Get Ticket</Button>
-                                        <Card.Subtitle> Price: <br/> ${blogcard.price}</Card.Subtitle>
+                                        <Button variant='outline-primary' onClick={()=> handleOpenModal(idx)}>Get Ticket</Button>
+                                        <Card.Subtitle> Price: <br/> ₦{blogcard.price}</Card.Subtitle>
                                     </div>
                                 </Card.Body>
                             </Card>
+                            {
+                                selectedEventIndex === null
+                                ? 
+                                <div></div>
+                                :
+                                <Modal show={selectedEventIndex === idx} fullscreen={fullscreen} scrollable onHide={()=> setSelectedEventIndex(null)}>
+                                <Modal.Header closeButton>
+                                    <Modal.Title>{selectedEvent.title}</Modal.Title>
+                                </Modal.Header>
+                                <Modal.Body>
+                                    <h1>Description</h1>
+                                    <p>{selectedEvent.shortText}</p>
+                                    <div className="Ticketing">
+                                        <Form.Label htmlFor="TicketAmount">Number of Ticket</Form.Label>
+                                        <Form.Control 
+                                            type="number"
+                                            min="1" max="10" placeholder={ticketNumber}
+                                            id="TicketAmount"
+                                            aria-describedby="ticketAmountHelpBlock"
+                                            onChange={(e)=> setTicketNumber(e.target.value)}
+                                        />
+                                        <Form.Text id="ticketAmountHelpBlock" muted>Minimum is 1 and Maximum is 10</Form.Text>
+
+                                        <Form.Control 
+                                            type="number"
+                                            placeholder="Enter code"
+                                            id="TicketCode"
+                                            aria-describedby="ticketCodeHelpBlock"
+                                        />
+                                        <Form.Text id="ticketCodeHelpBlock" muted>RUN-TECH SPACE code</Form.Text>
+                                    </div>
+                                    <h2 id="TotalPrice">₦{ ticketNumber * selectedEvent.price }</h2>
+                                    <Button id="TicketCheckoutButton">Get Ticket</Button>
+                                </Modal.Body>
+                            </Modal>
+                            }
+                            </div>                            
                         )
                     })
                 }

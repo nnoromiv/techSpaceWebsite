@@ -164,3 +164,45 @@
         }
     }
 }
+
+.modal-content {
+    width: 95vw;
+    margin: 20px 20px 0  20px;
+    border-radius: 20px 20px 0 0  !important;
+    background-color: #C3CEE7;
+    padding: 0 20px;
+    .modal-header{
+        .modal-title{
+            font-size: 20px
+        }
+    }
+    .modal-body{
+        h1{
+            font-size: 24px
+        }
+        p{
+            font-size: 14px;
+        }
+
+        #TotalPrice {
+            margin: 60px 0 10px 0;
+            font-size: 2rem;
+        }
+
+        #TicketCheckoutButton{
+            width: 100%;
+        }
+    }
+
+    @media only screen and (max-width: 1025px){
+        margin: 20px 10px 0  10px;
+    }
+
+    @media only screen and (max-width: 601px){
+        margin: 20px 5px 0  5px;
+    }
+
+    @media only screen and (max-width: 426px){
+        width: 92vw;
+    }
+}

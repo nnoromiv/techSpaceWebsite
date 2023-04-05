@@ -54,10 +54,10 @@ function EventBody() {
                     <Form.Label htmlFor="TicketAmount">Number of Ticket</Form.Label>
                     <Form.Control 
                         type="number"
-                        min="1" max="10" placeholder="1"
+                        min="1" max="10" placeholder={ticketNumber}
                         id="TicketAmount"
                         aria-describedby="ticketAmountHelpBlock"
-                        onChange={(e)=> setTicketNumber(e.currentTarget.value)}
+                        onChange={(e)=> setTicketNumber(e.target.value)}
                     />
                     <Form.Text id="ticketAmountHelpBlock" muted>Minimum is 1 and Maximum is 10</Form.Text>
 
