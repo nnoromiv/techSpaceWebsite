@@ -43,7 +43,7 @@ function EventBody() {
         })
     }
     </Carousel>
-    <Modal show={show} centered scrollable onHide={()=> setShow(false)}>
+    <Modal show={show} fullscreen scrollable onHide={()=> setShow(false)}>
             <Modal.Header closeButton>
                 <Modal.Title>Tech Fest</Modal.Title>
             </Modal.Header>
