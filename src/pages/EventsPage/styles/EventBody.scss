@@ -134,3 +134,31 @@
         }
     }
 }
+
+.modal-content {
+    width: 70vw;
+    background-color: #C3CEE7;
+    padding: 0 20px;
+    .modal-header{
+        .modal-title{
+            font-size: 20px
+        }
+    }
+    .modal-body{
+        h1{
+            font-size: 24px
+        }
+        p{
+            font-size: 14px;
+        }
+
+        #TotalPrice {
+            margin: 60px 0 10px 0;
+            font-size: 2rem;
+        }
+
+        #TicketCheckoutButton{
+            width: 100%;
+        }
+    }
+}
