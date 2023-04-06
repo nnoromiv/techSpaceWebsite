@@ -7,9 +7,11 @@ export const EndPointContext = createContext()
 
 function App() { 
   const [blogs, setBlogs] = useState([])
+  const [blogError, setBlogError] = useState(200)
   return (
     <EndPointContext.Provider value={[
       blogs, setBlogs,
+      blogError, setBlogError
     ]}>
       <div className="App">
         <RouterProvider router={SignedOutPages} />

@@ -36,3 +36,18 @@
         margin: 40px 10px 0  10px;
     }
 }
+
+.ErrorHandler{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    img{
+        background-color: #F4FAFF;
+        color: #F4FAFF;
+        background: #F4FAFF;
+    }
+    h1{
+        font-size: 3em;
+        color: #d3d3d3;
+    }
+}
