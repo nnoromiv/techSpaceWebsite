@@ -5,7 +5,6 @@ import Banner from './LandingPage/Banner';
 import Footer from './LandingPage/Footer';
 import BlogBody from './BlogPage/BlogBody';
 
-
 const BlogPage = () => {
   return (
     <div className="BlogPage">
