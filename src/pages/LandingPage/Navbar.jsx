@@ -74,7 +74,7 @@ export const SECONDARYNAVBARMENU = [
         link: 'UI/UX Development'
     },
     {
-        href: '#blog',
+        href: '/blogs',
         link: 'Blogs'
     },
     {
