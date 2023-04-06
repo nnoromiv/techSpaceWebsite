@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import { Card, Button, Form, Modal } from 'react-bootstrap'
 import "./styles/EventCards.scss"
 
@@ -31,15 +31,24 @@ const BLOGCARD = [
 
 
 function Cards(){
-    const [fullscreen, setFullscreen] = useState(true);
     const [ticketNumber, setTicketNumber] = useState(1);
     const [selectedEventIndex, setSelectedEventIndex] = useState(null)
-    const selectedEvent = BLOGCARD[selectedEventIndex]
 
-    function handleOpenModal(breakpoint,index) {
-        setFullscreen(breakpoint)
+    const selectedEvent = selectedEventIndex === null 
+    ? 
+    null 
+    :  
+    BLOGCARD[selectedEventIndex]
+
+    function handleOpenModal(index) {
         setSelectedEventIndex(index)
+        setTicketNumber(1)
     }
+
+    useEffect((
+
+    ) => {},
+    [selectedEventIndex, ticketNumber])
 
     return(        
         <div className='Card'>
@@ -67,7 +76,7 @@ function Cards(){
                                 ? 
                                 <div></div>
                                 :
-                                <Modal show={selectedEventIndex === idx} fullscreen={fullscreen} scrollable onHide={()=> setSelectedEventIndex(null)}>
+                                <Modal show={selectedEventIndex === idx} fullscreen scrollable onHide={()=> setSelectedEventIndex(null)}>
                                 <Modal.Header closeButton>
                                     <Modal.Title>{selectedEvent.title}</Modal.Title>
                                 </Modal.Header>
