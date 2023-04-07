@@ -53,9 +53,10 @@ function Cards(){
               const data = await response.json();
               setBlogError(200)
               setBlogs([...blogs, data])
+              console.log(blogs)
           } catch (error) {                
               console.log(blogError)
-              console.error(`Error fetching data: ${error}`);
+              console.error(`Error fetching data: ${error}${error.code}`);
           }
       }
       FetchData()
@@ -102,6 +103,11 @@ function Cards(){
     }
     return(        
         <div className='Card'>
+              {
+                  (blogError !== 200 || blogs === []) 
+                  &&
+                  <ErrorHandler Name='Blog' />
+              }
             <Slider {...SLIDERSETTINGS}>
             {  
                 blogs.map(blog => (

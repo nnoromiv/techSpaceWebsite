@@ -15,7 +15,6 @@ export const ErrorHandler = (props) => {
 
 const BlogBody = () => { 
     const [blogs, setBlogs, blogError, setBlogError] = useContext(EndPointContext)
-
     useEffect(() =>{
         async function FetchData(){
             try {
@@ -42,7 +41,8 @@ const BlogBody = () => {
   return (
     <div className='BlogBody'>
     {
-        blogError !== 200 &&
+        (blogError !== 200 || blogs === []) 
+        &&
         <ErrorHandler Name='Blog' />
     }
     {  
