@@ -1,39 +1,67 @@
-import React from 'react'
+import React, {useContext, useEffect} from 'react'
 import { Card, Button } from 'react-bootstrap'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./styles/Blog.scss"
+import { EndPointContext } from '../../App';
+import { ErrorHandler } from '../BlogPage/BlogBody';
+import { BLOGURL, headers } from '../../EndpointCalls';
 
-const BLOGCARD = [
-    {
-        image: 'images/blogimg.png',
-        date: '13-JAN-2023',
-        title: 'Story Headline',
-        shortText: 'Lorem ipsum dolor sit amet consectetur. Rhoncus ut dictum urna faucibus elit feugiat. Et dignissim in ut tellus vitae venenatis eget varius vestibulum.',
-    },
-    {
-        image: 'images/blogimg.png',
-        date: '13-JAN-2023',
-        title: 'Story Headline2',
-        shortText: 'Lorem ipsum dolor sit amet consectetur. Rhoncus ut dictum urna faucibus elit feugiat. Et dignissim in ut tellus vitae venenatis eget varius vestibulum.',
-    },
-    {
-        image: 'images/blogimg.png',
-        date: '13-JAN-2023',
-        title: 'Story Headline3',
-        shortText: 'Lorem ipsum dolor sit amet consectetur. Rhoncus ut dictum urna faucibus elit feugiat. Et dignissim in ut tellus vitae venenatis eget varius vestibulum.',
-    },
-    {
-        image: 'images/blogimg.png',
-        date: '13-JAN-2023',
-        title: 'Story Headline4',
-        shortText: 'Lorem ipsum dolor sit amet consectetur. Rhoncus ut dictum urna faucibus elit feugiat. Et dignissim in ut tellus vitae venenatis eget varius vestibulum.',
-    }
-]
+// const BLOGCARD = [
+//     {
+//         image: 'images/blogimg.png',
+//         date: '13-JAN-2023',
+//         title: 'Story Headline',
+//         shortText: 'Lorem ipsum dolor sit amet consectetur. Rhoncus ut dictum urna faucibus elit feugiat. Et dignissim in ut tellus vitae venenatis eget varius vestibulum.',
+//     },
+//     {
+//         image: 'images/blogimg.png',
+//         date: '13-JAN-2023',
+//         title: 'Story Headline2',
+//         shortText: 'Lorem ipsum dolor sit amet consectetur. Rhoncus ut dictum urna faucibus elit feugiat. Et dignissim in ut tellus vitae venenatis eget varius vestibulum.',
+//     },
+//     {
+//         image: 'images/blogimg.png',
+//         date: '13-JAN-2023',
+//         title: 'Story Headline3',
+//         shortText: 'Lorem ipsum dolor sit amet consectetur. Rhoncus ut dictum urna faucibus elit feugiat. Et dignissim in ut tellus vitae venenatis eget varius vestibulum.',
+//     },
+//     {
+//         image: 'images/blogimg.png',
+//         date: '13-JAN-2023',
+//         title: 'Story Headline4',
+//         shortText: 'Lorem ipsum dolor sit amet consectetur. Rhoncus ut dictum urna faucibus elit feugiat. Et dignissim in ut tellus vitae venenatis eget varius vestibulum.',
+//     }
+// ]
 
 
 function Cards(){
+  const [blogs, setBlogs, blogError, setBlogError] = useContext(EndPointContext)
+
+  useEffect(() =>{
+      async function FetchData(){
+          try {
+              const response = await fetch(`${BLOGURL}getAllPost`, {
+                  method: 'GET',
+                  headers,
+              });
+              if (!response.ok) {
+                  setBlogError(response.status)
+                  throw new Error(`HTTP error! status: ${response.status}`);
+              }
+              const data = await response.json();
+              setBlogError(200)
+              setBlogs([...blogs, data])
+          } catch (error) {                
+              console.log(blogError)
+              console.error(`Error fetching data: ${error}`);
+          }
+      }
+      FetchData()
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[blogError])
+
     var SLIDERSETTINGS = {
         dots: true,
         infinite: true,
@@ -75,23 +103,24 @@ function Cards(){
     return(        
         <div className='Card'>
             <Slider {...SLIDERSETTINGS}>
-                {
-                    BLOGCARD.map(blogcard => {
-                        return (
-
-                                <Card key={blogcard.title}>
-                                    <Card.Img variant='top' src={blogcard.image}/>
+            {  
+                blogs.map(blog => (
+                  blog === [] ?
+                    <ErrorHandler Name='Blog' />
+                    :
+                        blog.slice(0,4).map(data => (
+                          <Card key={data._id}>
+                                    <Card.Img variant='top' src='images/blogimg.png'/>
                                     <Card.Body>
-                                        <Card.Subtitle>{blogcard.date}</Card.Subtitle>
-                                        <Card.Title>{blogcard.title}</Card.Title>
-                                        <Card.Text>{blogcard.shortText}</Card.Text>
+                                        <Card.Subtitle>{data.text}</Card.Subtitle>
+                                        <Card.Title>{data.title}</Card.Title>
+                                        <Card.Text>{data.title}</Card.Text>
                                         <Button variant='outline-primary'>Read more</Button>
                                     </Card.Body>
                                 </Card>
-
-                        )
-                    })
-                }
+                        ))
+                ))
+            }
             </Slider>
         </div>
         
@@ -103,7 +132,9 @@ const Blog = () => {
     <div className='Blog' id='blog'>
         <div className='header'>
             <h1>Blog</h1>
-            <button>More</button>
+            <button>
+              <a href="/blogs" style={{textDecoration: 'none', color: '#C3CEE7'}}>More</a>
+            </button>
         </div>
         <p>Read up-to-date articles on scoops and latest trends happening around us.</p>
         <Cards />

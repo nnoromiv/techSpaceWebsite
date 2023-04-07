@@ -4,7 +4,7 @@ import './styles/BlogBody.scss'
 import { EndPointContext } from '../../App';
 import { BLOGURL, headers } from '../../EndpointCalls';
 
-const ErrorHandler = (props) => {
+export const ErrorHandler = (props) => {
     return(
         <div className="ErrorHandler">
             <img src="images/under_construction.svg" srcSet="" alt="underConstruction" />
