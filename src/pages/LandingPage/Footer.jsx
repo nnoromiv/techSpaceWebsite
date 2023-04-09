@@ -69,7 +69,9 @@ const FooterHead = () => {
 
                 <div>
                     <h3>Want to be part of a stack ?</h3>
-                    <p>Check out our stacks and<br /> courses</p>
+                    <a href='#about-stacks' style={{textDecoration: 'none', color: 'white',}}>
+                        <p>Check out our stacks and<br /> courses</p>
+                    </a>
                 </div>
             </div>
                 <div>

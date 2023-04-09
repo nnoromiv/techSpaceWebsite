@@ -10,9 +10,12 @@ export const MyButton = (props) => {
 
 const Content = () => {
   return (
-    <div className='Content'>
+    <div className='Content' id="contact">
         <h1>Tech for the <span>young</span></h1>
-        <p>Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat<br /> commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua. </p>
+        <p>
+        The aim of tech education for young people is to prepare them for a world that is increasingly driven by technology<br />
+        we equips young people with the tools and knowledge they need to thrive in a rapidly evolving digital landscape.
+        </p>
         <MyButton Innertext='Get started' />
     </div>
   )

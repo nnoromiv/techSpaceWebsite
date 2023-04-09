@@ -98,7 +98,7 @@ export const SECONDARYNAVBARMENU = [
         link: 'About Stacks'
     },
     {
-        href: '/contact',
+        href: '#contact',
         link: 'Contact'
     },
 ]

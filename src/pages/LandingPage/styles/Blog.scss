@@ -121,9 +121,9 @@
         }
     }
 
-    @media only screen and (max-width: 426px){
-        
+    @media only screen and (max-width: 426px){        
         .Card{    
+            gap: 2px !important;
             .card{
                 width: 290px !important;
                 height: fit-content;
