@@ -1,47 +1,15 @@
+@use "../../../custom.scss";
+@import "../../../custom.scss";
+
 .PrimaryNavbar{
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 40px 0 40px;
-    height: 100%;
-    .SearchBar{
-        display: none;
-        .faMagnifyingGlass{
-            margin: 13px -30px 0 0;
-            z-index: 1;
-            color: #D1D5DB;
-        }
-        input[type=search]{
-            width: 500px;
-            height: 40px;
-            color: #D1D5DB;
-            border: 1px solid #D1D5DB;
-            border-radius: 6px;
-            outline: none;
-            padding: 0 20px 0 40px;
-        }
-    }
-    img{
-        width: 144px;
-        height: 61px;
-        object-fit: cover;
-    }
     .AuthButton{
-        height: 100%;
         Button{
             margin: 0 5px;
         }
     }
 
-    @media only screen and (max-width: 693px){
-        .AuthButton{
-            display: none;
-        }
-    }
-
     @media only screen and (max-width: 426px){
-        padding: 10px 20px 0 20px;
         .AuthButton{
-            margin: 10px 0 0 0;
             Button{
                 font-size: 20px;
             }
@@ -51,25 +19,25 @@
 
 .SecondaryNavbar{
     display: flex;
-    padding: 20px 40px 0 40px;
+    padding: 20px 40px 0 40px !important;
     .nav-pills{
         padding: 0 10px;
         .nav-link{
-            color: black;
+            color: custom.$primaryBlack;
         }
         .active, .nav-pills .show > .nav-link {
-            background-color: #C3CEE7;
-            color: #002087;
+            background-color: map-get($theme-colors, "blue" );
+            color: map-get($theme-colors, "primary" );
         }
     }
     .nav-link{
-        color: black;
+        color: custom.$primaryBlack;
     }
     @media only screen and (max-width: 768px){
         font-size: 14px;
     }
     @media only screen and (max-width: 693px){
-        display: none;
+        display: none !important;
     }
 }
 
@@ -78,16 +46,16 @@
     .nav-pills{
         padding: 0 0 15px 0;
         .nav-link{
-            color: black;
+            color: custom.$primaryBlack;
         }
         .active, .nav-pills .show > .nav-link {
-            background-color: #C3CEE7;
-            color: #002087;
+            background-color: map-get($theme-colors, "blue" );
+            color: map-get($theme-colors, "primary" );
         }
     }
     .nav-link{
         font-size: 20px;
-        color: black;
+        color: custom.$primaryBlack;
     }
 }
 
@@ -104,7 +72,7 @@
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-    background: #002087;
+    background: map-get($theme-colors, "primary" );
 }
 
 /* Position and sizing of clickable cross button */
@@ -115,7 +83,7 @@
 
 /* Color/shape of close button cross */
 .bm-cross {
-    background: red;
+    background: map-get($theme-colors, "danger" );
 }
 
 /*
@@ -129,15 +97,11 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* General sidebar styles */
 .bm-menu {
-    background: #F4FAFF;
+    background: custom.$backgroundColor;
     padding: 2.5em 1.5em 0;
     font-size: 1.15em;
 }
 
-/* Morph shape necessary with bubble or elastic */
-.bm-morph-shape {
-    fill: #373a47;
-}
 
 /* Individual item */
 .bm-item {
@@ -146,7 +110,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* Styling of overlay */
 .bm-overlay {
-    background: rgba(0, 0, 0, 0.3);
+    background: custom.$primaryBlack;;
 }
 
     @media only screen and (max-width: 693px){

@@ -2,6 +2,34 @@ import { Divider } from '@mui/material'
 import React from 'react'
 import { Accordion } from 'react-bootstrap'
 import "./styles/FAQ.scss"
+import styled from 'styled-components'
+
+const FAQDiv = styled.div`
+    margin: 80px 0 0 0;
+    padding: 50px 0 80px 0;
+    text-align: center;
+
+    @media only screen and (max-width: 600px){
+        margin: 40px 0 0 0;
+    }
+`
+const FAQH1 = styled.h1`
+    font-size: 56px;
+    font-weight: 800;
+
+    @media only screen and (max-width: 1025px){
+        font-size: 52px;
+    }
+    @media only screen and (max-width: 769px){
+        font-size: 48px;
+    }
+    @media only screen and (max-width: 600px){
+        font-size: 38px;
+    }
+    @media only screen and (max-width: 426px){
+        font-size: 32px;
+    }
+`
 
 const ACCORDION = [
     {
@@ -59,11 +87,11 @@ function MyAccordion (){
 
 const FAQ = () => {
   return (
-    <div className='FAQ' id='FAQ'>
-        <h1>Frequently Asked Questions</h1>
+    <FAQDiv className='FAQ' id='FAQ'>
+        <FAQH1>Frequently Asked Questions</FAQH1>
         <Divider variant='middle' color='black'/>
         <MyAccordion />
-    </div>
+    </FAQDiv>
   )
 }
 

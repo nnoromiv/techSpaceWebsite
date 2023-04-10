@@ -1,9 +1,13 @@
+@use "../../../custom.scss";
+@import "../../../custom.scss";
+@import "~bootstrap/scss/bootstrap";
+
 .BlogBody{
     margin: 80px 40px 0 40px;
 
     .card{
         border: none;
-        background: #F4FAFF;
+        background: custom.$backgroundColor;
 
         .card-img-top {
             max-height: 500px !important;
@@ -12,13 +16,13 @@
         }
         .card-body{
             text-align: center;
-            background: #F4FAFF;
+            background: custom.$backgroundColor;
 
             .card-header {
-                color: #002087;
+                color: map-get($theme-colors, "primary" );
                 font-size: 30px;
                 font-weight: 700;
-                background-color: #F4FAFF;
+                background-color: custom.$backgroundColor;
             }
             .card-text{
                 margin: 20px 0 20px 0;
@@ -38,16 +42,13 @@
 }
 
 .ErrorHandler{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
     img{
-        background-color: #F4FAFF;
-        color: #F4FAFF;
-        background: #F4FAFF;
+        background-color: custom.$backgroundColor;
+        color: custom.$backgroundColor;
+        background: custom.$backgroundColor;
     }
     h1{
         font-size: 3em;
-        color: #d3d3d3;
+        color: custom.$primaryLightGray;
     }
 }

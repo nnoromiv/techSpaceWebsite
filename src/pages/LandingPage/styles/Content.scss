@@ -1,35 +1,24 @@
+@use "../../../custom";
+@import "../../../custom";
+
 .Content {
-    text-align: center;
-    padding: 20px 0 0 0;
     h1{
-        color: black;
-        font-size: 56px;
-        font-weight: bolder;
+        color: custom.$primaryBlack;
         span{
-            color: #C10A28
+            color: map-get($theme-colors, "danger" )
         }
-    }
-    p{
-        font-size: 20px;
-        font-weight: 100;
     }
     Button{
         width: 182px;
         height: 62px;
         border-radius: 6px;
-        border: 1px solid white;
-        background: linear-gradient(93.85deg, #002087 1.32%, rgba(193, 10, 40, 0.7) 98.17%);
+        border: 1px solid custom.$primaryWhite;
+        background: linear-gradient(93.85deg, map-get($theme-colors, "primary" ) 1.32%, rgba(193, 10, 40, 0.7) 98.17%);
         box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.06);
         font-size: 20px;
     }
 
     @media only screen and (max-width: 768px){
-        h1{
-            font-size: 54px;
-        }
-        p{
-            font-size: 18px;
-        } 
         Button{
             width: 172px;
             height: 62px;
@@ -39,12 +28,6 @@
     }
 
     @media only screen and (max-width: 682px){
-        h1{
-            font-size: 50px;
-        }
-        p{
-            font-size: 16px;
-        } 
         Button{
             width: 162px;
             height: 62px;
@@ -54,14 +37,6 @@
     }
     
     @media only screen and (max-width: 426px){
-        padding: 40px 20px 0 20px;
-        text-align: left;
-        h1{
-            font-size: 40px;
-        }
-        p{
-            font-size: 14px;            
-        } 
         Button{
             width: 162px;
             height: 52px;
@@ -70,27 +45,12 @@
         
     }
 
-    @media only screen and (max-width: 376px){
-        h1{
-            font-size: 35px;
-        }
-        p{
-            font-size: 14px;            
-        } 
+    @media only screen and (max-width: 376px){ 
         Button{
             width: 142px;
             height: 42px;
             font-size: 16px;
         }
         
-    }
-
-    @media only screen and (max-width: 321px){
-        h1{
-            font-size: 30px;
-        }
-        p{
-            font-size: 12px;            
-        }         
     }
 }

@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { Button, Carousel, Form, Modal } from 'react-bootstrap'
 import './styles/EventBody.scss'
+import styled from 'styled-components'
 
 const EVENTIMAGE = [
     {
@@ -12,6 +13,25 @@ const EVENTIMAGE = [
     }
 ]
 
+const DateContainerDiv = styled.div`
+    padding: 20px 40px;
+    width: fit-content;
+    border-radius: 50%;
+    margin: -50px 0 0 10px;
+    position: absolute;
+    z-index: 1;
+
+    @media only screen and (max-width: 1025px){     
+        padding: 15px 30px;
+    }
+    @media only screen and (max-width: 769px){ 
+        padding: 10px 25px;
+    }
+    @media only screen and (max-width: 426px){ 
+        margin: -20px 0 0 5px;
+    }  
+`
+
 
 function EventBody() {
     const [ticketNumber, setTicketNumber] = useState(1);
@@ -22,10 +42,10 @@ function EventBody() {
     }
   return (
     <div className='EventBody'>
-        <div className='DateContainer'>
+        <DateContainerDiv className='DateContainer'>
             <h1>17<span>th</span></h1>
             <h3>May</h3>
-        </div>
+        </DateContainerDiv>
     <Carousel className='Carousel' fade>
     {
         EVENTIMAGE.map(eventcarousel => {

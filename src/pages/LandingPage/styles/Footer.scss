@@ -1,122 +1,57 @@
+@use "../../../custom";
+@import "../../../custom";
+
 .FooterHead {
-    background-color: #002087;
-    margin: 10px 0 0 0;
-    padding: 40px;
-    align-items: center;
-    .GridFooterHead{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        .Getintouch{
-            display: flex;
-            flex-direction: column;
-            gap: 100px;
-            div{
-                color: white;
-                h3{
-                    font-size: 22px;
-                    font-weight: 600;
-                }
-                p{
-                    font-size: 18px;
-                    opacity: 0.7;
-                    text-decoration: underline;
-                }
-            }
-        }
+    background-color: map-get($theme-colors, "primary" );
+    .Getintouch{
         div{
-            color: white;
-                h3{
-                    font-size: 22px;
-                    font-weight: 600;
-                }
-                p{
-                    font-size: 18px;
-                    opacity: 0.7;
-                }
+            color: custom.$primaryWhite;
         }
-        .Mailus{
-            #email{
-                margin: 20px 0 0 0;
-                .form-control{
-                    background-color: #002087;
-                    border-radius: 0;
-                    border: 0;
-                    border-bottom: 1px solid gray;
-                }
-            }
-            #checkbox{
-                margin: 20px 0 0 0;
-                display: grid;
-                grid-template-columns: 10% 90%;
-                span{
-                    padding: 0 0;
-                    width: fit-content;
-                    height: fit-content;
-                }
-            }
-            Button{
-                margin: 20px 0 0 0;
+    }
+    div{
+        color: custom.$primaryWhite;
+    }
+    .Mailus{
+        #email{
+            margin: 20px 0 0 0;
+            .form-control{
+                background-color: map-get($theme-colors, "primary" );
                 border-radius: 0;
-                border: 1px solid white;
-                background-color: white;
-                color: black;
-                font-weight: 400;
+                border: 0;
+                border-bottom: 1px solid custom.$darkGray;
             }
         }
-    }
-
-    @media only screen and (max-width: 769px){
-        .GridFooterHead{
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-            .Getintouch{
-                gap: 50px;
-                div{
-                    h3{
-                        font-size: 20px;
-                    }
-                    p{
-                        font-size: 15px;
-                    }
-                }
-            }
-            div{
-                    h3{
-                        font-size: 20px;
-                    }
-                    p{
-                        font-size: 15px;
-                    }
+        #checkbox{
+            margin: 20px 0 0 0;
+            display: grid;
+            grid-template-columns: 10% 90%;
+            span{
+                padding: 0 0;
+                width: fit-content;
+                height: fit-content;
             }
         }
-    }
-
-    @media only screen and (max-width: 601px){
-        padding: 20px;
-        .GridFooterHead{
-            grid-template-columns: repeat(1, 1fr);
-            gap: 30px;
+        Button{
+            margin: 20px 0 0 0;
+            border-radius: 0;
+            border: 1px solid white;
+            background-color: custom.$primaryWhite;
+            color: custom.$primaryBlack;
+            font-weight: 400;
         }
     }
 }
 
 .FooterTail{
-    display: flex;
-    background-color: #002087;
-    padding: 20px;
-    align-items: center;
-    justify-content: space-between;
+    background-color: map-get($theme-colors, "primary" );
     h2{
-        font-weight: 600;
-        font-size: 18px;
-        color: white;
-        margin: 10px 0 0 0;
+        color: custom.$primaryWhite;
     }
     .FooterMenu{
         display: flex;
         .nav-pills{
             .nav-link{
-                color: white;
+                color: custom.$primaryWhite;
             }
         }
     }
@@ -125,13 +60,6 @@
     }
 
     @media only screen and (max-width: 769px){
-        display: grid;
-        grid-template-columns: 10% 60% 30%;
-        gap: 10px;
-        h2{
-            margin: 5px 0 0 0;
-            font-size: 10px;
-        }
         .FooterMenu{
             .nav-pills{
                 .nav-link{
@@ -146,20 +74,6 @@
         }
     }
 
-    @media only screen and (max-width: 651px){
-        padding: 20px;
-        grid-template-columns: 30% 70% ;
-
-        h2{
-            margin: 5px 0 0 10px;
-        }
-    }
-
-    
-    @media only screen and (max-width: 426px){
-        padding: 10px;
-        grid-template-columns: 100% ;
-    }
 
     @media only screen and (max-width: 376px){
         .FooterMenu{

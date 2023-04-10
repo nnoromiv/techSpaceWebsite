@@ -1,15 +1,16 @@
+@use "custom";
 @import "~bootstrap/scss/bootstrap";
 @import "custom";
 
 
 .App {
-  background-color: #F4FAFF;
+  background-color: custom.$backgroundColor;
   height: 100%;
   overflow-x: hidden;
   scroll-behavior: smooth;
   transition: 1.5s;
     .App-link {
-      color: white;
+      color: custom.$primaryWhite;
       font-family: sans-serif;
     }
 }
@@ -20,16 +21,16 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #d3d3d3;
+  background: custom.$primaryLightGray;
   border-radius: 30px;
 }
 
 ::-webkit-scrollbar-thumb{
-  background: #C3CEE7;
+  background: map-get($theme-colors, "blue" );
   border-radius: 30px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #002087;
-  border: 1px solid white;
+  background: map-get($theme-colors, "primary" );
+  border: 1px solid custom.$primaryWhite
 }

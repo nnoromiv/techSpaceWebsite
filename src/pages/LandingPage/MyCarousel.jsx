@@ -1,6 +1,27 @@
 import React from 'react'
 import { Carousel } from 'react-bootstrap'
 import "./styles/MyCarousel.scss"
+import styled from 'styled-components'
+
+const CarouselImage = styled.img`
+    width: 94vw;
+    height: 521px;
+    border-radius: 20px;
+    object-fit: cover;
+
+    @media only screen and (max-width: 1025px){     
+            width: 94vw;
+    }
+
+    @media only screen and (max-width: 769px){     
+            height: 450px;
+    }
+
+    @media only screen and (max-width: 426px){     
+            width: 94vw;
+            height: 321px;           
+    }
+`
 
 const CAROUSELIMAGE = [
     {
@@ -24,7 +45,7 @@ function MyCarousel() {
         CAROUSELIMAGE.map(carouselimage => {
             return(
                 <Carousel.Item key={carouselimage.key}>
-                    <img alt={carouselimage.key} src={carouselimage.image} srcSet='' />
+                    <CarouselImage alt={carouselimage.key} src={carouselimage.image} srcSet='' />
                 </Carousel.Item>
             )
         })

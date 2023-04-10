@@ -1,6 +1,53 @@
 import React, {useEffect, useState} from 'react'
 import { Card, Button, Form, Modal } from 'react-bootstrap'
 import "./styles/EventCards.scss"
+import styled from 'styled-components'
+
+const EventCard = styled.div`
+        margin: 40px 50px !important;
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        gap: 20px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+
+        
+    @media only screen and (max-width: 1025px){
+        margin: 40px 40px !important;              
+    }
+
+    @media only screen and (max-width: 769px){
+        margin: 40px 30px !important;     
+        grid-template-columns: 50% 50% ;  
+        gap: 5px; 
+    }
+
+    @media only screen and (max-width: 426px){   
+        margin: 40px 0 !important;
+        grid-template-columns: 100%;   
+    }
+`;
+
+const DateContainerDiv = styled.div`
+    padding: 15px 30px;
+    width: fit-content;
+    border-radius: 50%;
+    margin: -30px 0 0 -30px;
+    position: absolute;
+    z-index: 1;
+
+    @media only screen and (max-width: 1025px){
+        padding: 15px 30px;
+    }
+
+    @media only screen and (max-width: 769px){
+        padding: 10px 25px;
+    }
+
+    @media only screen and (max-width: 426px){ 
+        margin: -20px 0 0 -10px;   
+    }
+`;
 
 const BLOGCARD = [
     {
@@ -51,16 +98,16 @@ function Cards(){
     [selectedEventIndex, ticketNumber])
 
     return(        
-        <div className='Card'>
+        <EventCard className='Card'>
                 {
                     BLOGCARD.map((blogcard, idx) => {
                         return (
                             <div key={idx}>
                             <Card>
-                                <div className='DateContainer'>
+                                <DateContainerDiv className='DateContainer'>
                                     <h1>20<span>th</span></h1>
                                     <h3>May</h3>
-                                </div>
+                                </DateContainerDiv>
                                 <Card.Img variant='top' src={blogcard.image}/>
                                 <Card.Body>
                                     <Card.Title>{blogcard.title}</Card.Title>
@@ -111,14 +158,14 @@ function Cards(){
                         )
                     })
                 }
-        </div>
+        </EventCard>
         
     )
 }
 
 const EventCards = () => {
   return (
-    <div className='EventCards' id='blog'>
+    <div className='EventCards' id='blog' style={{ margin: '80px 0 0 0'}}>
         <Cards />
     </div>
   )

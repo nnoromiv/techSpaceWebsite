@@ -6,62 +6,70 @@ import "slick-carousel/slick/slick-theme.css";
 import "./styles/Blog.scss"
 import { EndPointContext } from '../../App';
 import { ErrorHandler } from '../BlogPage/BlogBody';
-import { BLOGURL, headers } from '../../EndpointCalls';
+import { FetchBlogs } from '../../EndpointCalls';
+import styled from 'styled-components';
 
-// const BLOGCARD = [
-//     {
-//         image: 'images/blogimg.png',
-//         date: '13-JAN-2023',
-//         title: 'Story Headline',
-//         shortText: 'Lorem ipsum dolor sit amet consectetur. Rhoncus ut dictum urna faucibus elit feugiat. Et dignissim in ut tellus vitae venenatis eget varius vestibulum.',
-//     },
-//     {
-//         image: 'images/blogimg.png',
-//         date: '13-JAN-2023',
-//         title: 'Story Headline2',
-//         shortText: 'Lorem ipsum dolor sit amet consectetur. Rhoncus ut dictum urna faucibus elit feugiat. Et dignissim in ut tellus vitae venenatis eget varius vestibulum.',
-//     },
-//     {
-//         image: 'images/blogimg.png',
-//         date: '13-JAN-2023',
-//         title: 'Story Headline3',
-//         shortText: 'Lorem ipsum dolor sit amet consectetur. Rhoncus ut dictum urna faucibus elit feugiat. Et dignissim in ut tellus vitae venenatis eget varius vestibulum.',
-//     },
-//     {
-//         image: 'images/blogimg.png',
-//         date: '13-JAN-2023',
-//         title: 'Story Headline4',
-//         shortText: 'Lorem ipsum dolor sit amet consectetur. Rhoncus ut dictum urna faucibus elit feugiat. Et dignissim in ut tellus vitae venenatis eget varius vestibulum.',
-//     }
-// ]
+const BlogHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin: 0 100px;
+  
+  @media only screen and (max-width: 1025px){        
+    margin: 0 50px ;
+  }
+  @media only screen and (max-width: 769px){        
+    margin: 0 30px;
+  }
+`
+const BlogHeaderH1 = styled.h1`
+  font-size: 56px;
+  font-weight: 800;
 
+  @media only screen and (max-width: 1025px){        
+    font-size: 54px;
+  }
+  @media only screen and (max-width: 769px){        
+    font-size: 44px; 
+  }
+`
+const BlogHeaderButton = styled.button`
+  margin: 10px 0 0 0;
+  padding: 5px 25px;
+  border-radius: 20px;
+  height: fit-content;
+  transition: 1s;
+
+  :hover {
+    padding: 5px 30px;
+  }
+`
+const CardP = styled.p`
+  margin: 10px 100px;
+  font-size: 18px;
+  font-weight: 400;
+
+  @media only screen and (max-width: 1025px){        
+    margin: 10px 50px;
+  }
+  @media only screen and (max-width: 769px){        
+    font-size: 15px;
+    margin: 10px 30px; 
+  }
+`
 
 function Cards(){
   const [blogs, setBlogs, blogError, setBlogError] = useContext(EndPointContext)
 
-  useEffect(() =>{
-      async function FetchData(){
-          try {
-              const response = await fetch(`${BLOGURL}getAllPost`, {
-                  method: 'GET',
-                  headers,
-              });
-              if (!response.ok) {
-                  setBlogError(response.status)
-                  throw new Error(`HTTP error! status: ${response.status}`);
-              }
-              const data = await response.json();
-              setBlogError(200)
-              setBlogs([...blogs, data])
-              console.log(blogs)
-          } catch (error) {                
-              console.log(blogError)
-              console.error(`Error fetching data: ${error}${error.code}`);
-          }
+  useEffect(() => {
+      async function fetchBlog() {
+        try {
+          await FetchBlogs(setBlogs, setBlogError);
+        } catch (error) {
+          console.error(`Error fetching data: ${error}`);
+        }
       }
-      FetchData()
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[blogError])
+      fetchBlog();
+  }, [setBlogs, setBlogError]);
 
     var SLIDERSETTINGS = {
         dots: true,
@@ -103,28 +111,26 @@ function Cards(){
     }
     return(        
         <div className='Card'>
-              {
-                  (blogError !== 200 || blogs === []) 
-                  &&
-                  <ErrorHandler Name='Blog' />
-              }
+            {
+                (blogError !== 200 || blogs.length === 0) 
+                &&
+                <ErrorHandler Name='Blog' />
+            }
             <Slider {...SLIDERSETTINGS}>
             {  
-                blogs.map(blog => (
-                  blog === [] ?
+                blogs.slice(0,4).map(data => (
+                  data === [] ?
                     <ErrorHandler Name='Blog' />
                     :
-                        blog.slice(0,4).map(data => (
-                          <Card key={data._id}>
-                                    <Card.Img variant='top' src='images/blogimg.png'/>
-                                    <Card.Body>
-                                        <Card.Subtitle>{data.text}</Card.Subtitle>
-                                        <Card.Title>{data.title}</Card.Title>
-                                        <Card.Text>{data.title}</Card.Text>
-                                        <Button variant='outline-primary'>Read more</Button>
-                                    </Card.Body>
-                                </Card>
-                        ))
+                    <Card key={data._id}>
+                        <Card.Img variant='top' src='images/blogimg.png'/>
+                        <Card.Body>
+                            <Card.Subtitle>{data.text}</Card.Subtitle>
+                            <Card.Title>{data.title}</Card.Title>
+                            <Card.Text>{data.title}</Card.Text>
+                            <Button variant='outline-primary'>Read more</Button>
+                        </Card.Body>
+                    </Card>
                 ))
             }
             </Slider>
@@ -135,14 +141,14 @@ function Cards(){
 
 const Blog = () => {
   return (
-    <div className='Blog' id='blog'>
-        <div className='header'>
-            <h1>Blog</h1>
-            <button>
+    <div className='Blog' id='blog' style={{ margin: '80px 0 0 0'}}>
+        <BlogHeader className='header'>
+            <BlogHeaderH1>Blog</BlogHeaderH1>
+            <BlogHeaderButton>
               <a href="/blogs" style={{textDecoration: 'none', color: '#C3CEE7'}}>More</a>
-            </button>
-        </div>
-        <p>Read up-to-date articles on scoops and latest trends happening around us.</p>
+            </BlogHeaderButton>
+        </BlogHeader>
+        <CardP>Read up-to-date articles on scoops and latest trends happening around us.</CardP>
         <Cards />
     </div>
   )

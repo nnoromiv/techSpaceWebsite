@@ -1,32 +1,55 @@
 import Button from 'react-bootstrap/Button'
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import "./styles/Navbar.scss"
 import { Divider } from '@mui/material'
 import { Nav, NavDropdown } from 'react-bootstrap'
 import { slide as Menu } from 'react-burger-menu'
+import styled from 'styled-components'
+
+const LogoImg = styled.img`
+    width: 144px;
+    height: 61px;
+    object-fit: cover;
+`
+
+const PrimaryNavbarDiv = styled.div`
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px 0 40px;
+    height: 100%;
+
+    @media only screen and (max-width: 426px){
+        padding: 10px 20px 0 20px;
+    }
+`
+
+const AuthButtonDiv =styled.div`
+    height: 100%;
+
+    @media only screen and (max-width: 693px){
+        display: none;
+    }
+    @media only screen and (max-width: 426px){
+            margin: 10px 0 0 0;
+    }
+`
 
 const Logo = () => {
     return (
-        <img src='images/Logo.png' alt="logo" srcSet="" />
+        <LogoImg src='images/Logo.png' alt="logo" srcSet="" />
     )
 }
 
 const PrimaryNavbar = () => {
     return(
-        <div className='PrimaryNavbar'>
+        <PrimaryNavbarDiv className='PrimaryNavbar'>
         <Logo />
-        <div className='SearchBar'>
-            <FontAwesomeIcon icon={faMagnifyingGlass} className='faMagnifyingGlass' />
-            <input placeholder='Search' type="search"/>
-        </div>
-        <div className='AuthButton'>
+        <AuthButtonDiv className='AuthButton'>
             <Button variant='primary' >Sign in</Button>
             <Button variant='outline-primary'>Log in</Button> 
-        </div>
+        </AuthButtonDiv>
         <HamBurgerMenu />
-    </div>
+    </PrimaryNavbarDiv>
     )
 }
 

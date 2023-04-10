@@ -1,16 +1,14 @@
+@use "../../../custom";
+@import "../../../custom";
+@import "~bootstrap/scss/bootstrap";
+
 .EventBody{
     .DateContainer{
-        border: 3px solid white;
-        padding: 20px 40px;
-        width: fit-content;
-        border-radius: 50%;
-        margin: -50px 0 0 10px;
-        position: absolute;
-        z-index: 1;
-        background-color: #002087;
+        border: 3px solid custom.$primaryWhite;
+        background-color: map-get($theme-colors, "primary" );
 
         h1, h3{
-            color: white;
+            color: custom.$primaryWhite;
             font-size: 36px;
             span{
                 font-size: 20px
@@ -27,7 +25,7 @@
             width: 91vw;
             height: 521px;
             border-radius: 20px;
-            background:#D9D9D9;
+            background: custom.$primaryGray;
             object-fit: cover;
             opacity: 0.7;
         }
@@ -42,9 +40,9 @@
         .carousel-control-prev-icon,
         .carousel-control-next-icon{
             width: 15px;
-            background-color: #002087;
+            background-color: map-get($theme-colors, "primary" );
             margin: 5px 15px;
-            border: 1px solid #002087;
+            border: 1px solid map-get($theme-colors, "primary" );
             border-radius: 20px;
         }
         .carousel-indicators {
@@ -54,10 +52,10 @@
                 width: 90px !important;
             }
             button[type=button] {
-                background-color: #002087;
+                background-color: map-get($theme-colors, "primary" );
                 width: 45px;
                 height: 10px;
-                border: 1px solid #002087;
+                border: 1px solid map-get($theme-colors, "primary" );
                 border-radius: 20px !important;
             }
         }
@@ -65,8 +63,6 @@
 
     @media only screen and (max-width: 1025px){     
         .DateContainer{
-            padding: 15px 30px;
-    
             h1, h3{
                 font-size: 32px !important;
                 span{
@@ -84,8 +80,6 @@
 
     @media only screen and (max-width: 769px){ 
         .DateContainer{
-            padding: 10px 25px;
-    
             h1, h3{
                 font-size: 28px !important;
                 span{
@@ -139,7 +133,7 @@
     width: 95vw;
     margin: 20px 20px 0  20px;
     border-radius: 20px 20px 0 0  !important;
-    background-color: #C3CEE7;
+    background-color: map-get($theme-colors, "blue" );
     padding: 0 20px;
     .modal-header{
         .modal-title{

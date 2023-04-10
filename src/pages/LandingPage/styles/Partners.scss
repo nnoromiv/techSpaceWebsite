@@ -1,58 +1,9 @@
+@use "../../../custom";
+@import "../../../custom";
+
 .Partners {
-    margin: 100px 0 0 0;
-    padding: 50px 100px;
-    display: flex;
-    justify-content: space-between;
-    background-color: #002087;
+    background-color: map-get($theme-colors, "primary" );
     h1{
-        color: white;
-        font-size: 56px;
-        margin: 20px 0 0 0;
-    }
-    .PartnersLogo{
-        display: flex;
-        gap: 120px;
-        img{
-            width: 127px;
-            height: 127px;
-        }
-    }
-
-    @media only screen and (max-width: 769px){
-        padding: 30px;
-        h1{
-            font-size: 50px;
-        } 
-        .PartnersLogo{
-            display: flex;
-            gap: 70px;
-            img{
-                width: 100px;
-                height: 100px;
-            }
-        }
-    }
-
-    @media only screen and (max-width: 666px){
-        flex-direction: column;
-        text-align: center;
-        gap: 30px;
-        h1{
-            font-size: 50px;
-        } 
-        .PartnersLogo{
-            display: flex;
-            justify-content: space-between;
-            img{
-                width: 100px;
-                height: 100px;
-            }
-        }
-    }
-
-    @media only screen and (max-width: 350px){
-        h1{
-            font-size: 40px;
-        } 
+        color: custom.$primaryWhite;
     }
 }

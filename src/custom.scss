@@ -1,6 +1,21 @@
+$backgroundColor: #F4FAFF;
+$primaryBlack: black;
+$primaryWhite: white;
+$primaryLightGray: #D3D3D3;
+$primaryGray: #D9D9D9;
+$darkGray: gray;
+
+
+
 $theme-colors: (
     "primary": #002087,
-    "danger": red
+    "danger": #C10A28,
+    "blue": #C3CEE7,
+    "success": #27AE60,
+    "warning": #E2B93B,
+    "error": #F84343,
+    "coolBlue": #6B7280,
+    
 );
 
 @import "~bootstrap/scss/bootstrap";

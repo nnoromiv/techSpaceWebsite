@@ -1,21 +1,20 @@
+@use "../../../custom";
+@import "../../../custom";
+
 .Carousel{
     display: flex;
     justify-content: center;
     margin: 80px 0 0 0;
     padding: 0 20px;
     img {
-        width: 94vw;
-        height: 521px;
-        border-radius: 20px;
-        background:#D9D9D9;
-        object-fit: cover;
+        background: custom.$primaryGray;
     }
     .carousel-control-prev-icon,
     .carousel-control-next-icon{
         width: 15px;
-        background-color: #002087;
+        background-color: map-get($theme-colors, "primary" );
         margin: 5px 15px;
-        border: 1px solid #002087;
+        border: 1px solid map-get($theme-colors, "primary" );
         border-radius: 20px;
     }
     .carousel-indicators {
@@ -25,35 +24,25 @@
             width: 90px !important;
         }
         button[type=button] {
-            background-color: #002087;
+            background-color: map-get($theme-colors, "primary" );
             width: 45px;
             height: 10px;
-            border: 1px solid #002087;
+            border: 1px solid map-get($theme-colors, "primary" );
             border-radius: 20px !important;
         }
     }
 
     @media only screen and (max-width: 1025px){     
         padding: 0 30px;
-        img {
-            width: 94vw;
-        }
     }
 
     @media only screen and (max-width: 769px){     
         padding: 0 20px;
-        img {
-            height: 450px;
-        }
     }
 
     
     @media only screen and (max-width: 426px){     
         padding: 0 10px;
         margin: 60px 0 0 0;
-        img {
-            width: 94vw;
-            height: 321px;           
-        }
     }
 }

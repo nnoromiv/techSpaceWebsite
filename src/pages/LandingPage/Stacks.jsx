@@ -1,7 +1,162 @@
 import React from 'react'
 import { MyButton } from './Content'
 import { Icon } from '@iconify/react';
-import "./styles/Stacks.scss"
+import styled from 'styled-components';
+
+const StacksDiv = styled.div`
+    margin: 80px 100px 0 100px;
+    text-align: center;
+    @media only screen and (max-width: 1025px){
+        margin: 80px 50px 0 50px;
+    }
+
+    @media only screen and (max-width: 769px){
+        margin: 60px 20px 0 20px;
+    }
+
+    @media only screen and (max-width: 600px){
+        margin: 60px 20px 0 20px;
+    }
+
+    @media only screen and (max-width: 426px){
+        padding: 0 10px 0 10px;
+    }
+
+    @media only screen and (max-width: 330px){
+        padding: 0 10px 0 10px;
+    }
+`
+const StackedRow = styled.div`
+    margin: 80px 0 0 0;
+    display: flex;
+    gap: 132px;
+    text-align: left;
+    
+    @media only screen and (max-width: 1025px){        
+        gap: 30px;           
+    }
+    @media only screen and (max-width: 600px){ 
+        flex-direction: column;        
+    }
+`
+const StackedRowReversed = styled.div`
+    margin: 80px 0 0 0;
+    display: flex;
+    gap: 132px;
+    text-align: left;
+    flex-direction: row-reverse;
+    
+    @media only screen and (max-width: 1025px){        
+        gap: 30px;           
+    }
+    @media only screen and (max-width: 600px){ 
+        flex-direction: column;        
+    }
+`
+const FrontendStackImage = styled.img`
+    width: 450px;
+    height: 186.02px;
+    border-radius: 50% 50% 65% 35% / 62% 23% 77% 38% ;
+
+    @media only screen and (max-width: 769px){
+        width: 350px;
+    }
+    @media only screen and (max-width: 426px){               
+        width: 300.92px !important;
+    } 
+    @media only screen and (max-width: 330px){               
+        width: 250.92px !important;             
+    }
+`
+const UIUXStackImage = styled.img`
+     width: 400px !important;
+    height: 240.92px;
+    border-radius: 57% 43% 59% 41% / 62% 78% 22% 38%   ;
+
+    @media only screen and (max-width: 769px){
+        width: 300 !important;
+    }
+    @media only screen and (max-width: 600px){             
+        height: 200.92px;
+    }
+    @media only screen and (max-width: 426px){               
+        width: 300.92px !important;
+    } 
+    @media only screen and (max-width: 330px){               
+        width: 250.92px !important;             
+    }
+`
+const BackendStackImage = styled.img`
+    width: 450px !important;
+    height: 240.44px;
+    border-radius: 100% 0% 67% 33% / 62% 30% 70% 38%;  ;
+
+    @media only screen and (max-width: 769px){
+        width: 350 !important;
+    }
+    @media only screen and (max-width: 600px){             
+        height: 200.92px;
+    }
+    @media only screen and (max-width: 426px){               
+        width: 300.92px !important;
+    } 
+    @media only screen and (max-width: 330px){               
+        width: 250.92px !important;             
+    }
+`
+const DataScienceStackImage = styled.img`
+    width: 400px !important;
+    height: 240.92px;
+    border-radius: 65% 35% 76% 24% / 62% 28% 72% 38%; ;
+
+    @media only screen and (max-width: 769px){
+        width: 300 !important;
+    }
+    @media only screen and (max-width: 600px){             
+        height: 200.92px;
+    }
+    @media only screen and (max-width: 426px){               
+        width: 300.92px !important;
+    } 
+    @media only screen and (max-width: 330px){               
+        width: 250.92px !important;             
+    }
+`
+const CybersecurityStackImage = styled.img`
+    width: 450px !important;
+    height: 240.44px;
+    border-radius: 65% 35% 13% 87% / 19% 28% 72% 81%;  ;
+
+    @media only screen and (max-width: 769px){
+        width: 350 !important;
+    }
+    @media only screen and (max-width: 600px){             
+        height: 200.92px;
+    }
+    @media only screen and (max-width: 426px){               
+        width: 300.92px !important;
+    } 
+    @media only screen and (max-width: 330px){               
+        width: 250.92px !important;             
+    }
+`
+const StackRowH2 = styled.h2`
+    margin: -3px 0 3px 15px;
+    font-size: 32px;
+    font-weight: 600;
+
+    @media only screen and (max-width: 769px){
+        font-size: 20px;
+    }
+`
+const StackRowP = styled.p`
+    font-size: 18px;
+    margin: 0 0 20px 0;
+
+    @media only screen and (max-width: 769px){
+        font-size: 16px;
+    }
+`
 
 const STACKDESC = [
     {
@@ -38,114 +193,114 @@ const STACKDESC = [
 
 const FrontendStack = () => {
     return(
-        <div className='Frontend'>
-            <img alt='frontend' srcSet='' src='images/frontend.svg' />
+        <StackedRow className='Frontend'>
+            <FrontendStackImage alt='frontend' srcSet='' src='images/frontend.svg' />
             <div className='info'>
-                <div className='header'>
+                <div style={{display: 'flex'}}>
                     <Icon icon="ic:twotone-library-add-check" color="#002087" width="34" height="34" />
-                    <h2>Frontend Development Stack</h2>
+                    <StackRowH2>Frontend Development Stack</StackRowH2>
                 </div>
                 {
                     STACKDESC.slice(0,1).map( fd => (
-                        <p>{fd.desc.slice(0,390)}.....</p>
+                        <StackRowP>{fd.desc.slice(0,390)}.....</StackRowP>
                     ))
                 }
                 <MyButton Innertext='View more'/>
             </div>
-        </div>
+        </StackedRow>
     )
 }
 
 const UIUXStack = () => {
     return(
-        <div className='UIUX'>
-            <img alt='UIUX' srcSet='' src='images/uiux.svg' />
+        <StackedRowReversed className='UIUX'>
+            <UIUXStackImage alt='UIUX' srcSet='' src='images/uiux.svg' />
             <div className='info'>
-                <div className='header'>
+                <div style={{display: 'flex'}}>
                     <Icon icon="ic:twotone-library-add-check" color="#002087" width="34" height="34" />
-                    <h2>UIUX Development Stack</h2>
+                    <StackRowH2>UIUX Development Stack</StackRowH2>
                 </div>
                 {
                     STACKDESC.slice(1,2).map( uiux => (
-                        <p>{uiux.desc.slice(0,390)}.....</p>
+                        <StackRowP>{uiux.desc.slice(0,390)}.....</StackRowP>
                     ))
                 }                
                 <MyButton Innertext='View more'/>
             </div>
-        </div>
+        </StackedRowReversed>
     )
 }
 
 const BackendStack = () => {
     return(
-        <div className='Backend'>
-            <img alt='backend' srcSet='' src='images/backend.svg' />
+        <StackedRow className='Backend'>
+            <BackendStackImage alt='backend' srcSet='' src='images/backend.svg' />
             <div className='info'>
-                <div className='header'>
+                <div style={{display: 'flex'}}>
                     <Icon icon="ic:twotone-library-add-check" color="#002087" width="34" height="34" />
-                    <h2>Backend Development Stack</h2>
+                    <StackRowH2>Backend Development Stack</StackRowH2>
                 </div>
                 {
                     STACKDESC.slice(2,3).map( bd => (
-                        <p>{bd.desc.slice(0,380)}.....</p>
+                        <StackRowP>{bd.desc.slice(0,380)}.....</StackRowP>
                     ))
                 }
                 <MyButton Innertext='View more'/>
             </div>
-        </div>
+        </StackedRow>
     )
 }
 
 const DataScienceStack = () => {
     return(
-        <div className='DataScience'>
-            <img alt='DataScience' srcSet='' src='images/datascience.svg' />
+        <StackedRowReversed className='DataScience'>
+            <DataScienceStackImage alt='DataScience' srcSet='' src='images/datascience.svg' />
             <div className='info'>
-                <div className='header'>
+                <div style={{display: 'flex'}}>
                     <Icon icon="ic:twotone-library-add-check" color="#002087" width="34" height="34" />
-                    <h2>Data Science Stack</h2>
+                    <StackRowH2>Data Science Stack</StackRowH2>
                 </div>
                 {
                     STACKDESC.slice(3,4).map( ds => (
-                        <p>{ds.desc.slice(0,390)}.....</p>
+                        <StackRowP>{ds.desc.slice(0,390)}.....</StackRowP>
                     ))
                 }                
                 <MyButton Innertext='View more'/>
             </div>
-        </div>
+        </StackedRowReversed>
     )
 }
 
 const CybersecurityStack = () => {
     return(
-        <div className='Cybersecurity'>
-            <img alt='Cybersecurity' srcSet='' src='images/cybersecurity.svg' />
+        <StackedRow className='Cybersecurity'>
+            <CybersecurityStackImage alt='Cybersecurity' srcSet='' src='images/cybersecurity.svg' />
             <div className='info'>
-                <div className='header'>
+                <div style={{display: 'flex'}}>
                     <Icon icon="ic:twotone-library-add-check" color="#002087" width="34" height="34" />
-                    <h2>Cybersecurity Stack</h2>
+                    <StackRowH2>Cybersecurity Stack</StackRowH2>
                 </div>
                 {
                     STACKDESC.slice(4,5).map( cs => (
-                        <p>{cs.desc.slice(0,390)}.....</p>
+                        <StackRowP>{cs.desc.slice(0,390)}.....</StackRowP>
                     ))
                 }                
                 <MyButton Innertext='View more'/>
             </div>
-        </div>
+        </StackedRow>
     )
 }
 
 const Stacks = () => {
   return (
-    <div className='Stacks' id='about-stacks'>
+    <StacksDiv className='Stacks' id='about-stacks'>
         <h1>Stacks</h1>
         <FrontendStack />
         <UIUXStack />
         <BackendStack />
         <DataScienceStack />
         <CybersecurityStack />
-    </div>
+    </StacksDiv>
   )
 }
 

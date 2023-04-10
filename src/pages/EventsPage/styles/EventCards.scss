@@ -1,17 +1,12 @@
-.EventCards{
-    margin: 80px 0 0 0;
+@use "../../../custom";
+@import "~bootstrap/scss/bootstrap";
+@import "../../../custom";
 
+.EventCards{
     ::-webkit-scrollbar{
         display: none;
     }
     .Card{
-        margin: 40px 50px !important;
-        display: grid;
-        grid-template-columns: 30% 30% 30%;
-        gap: 20px;
-        overflow-x: scroll;
-        overflow-y: hidden;
-
         .card{
             width: 300px;
             height: fit-content;
@@ -19,17 +14,11 @@
             margin: 40px 0 0 50px;
 
             .DateContainer{
-                border: 3px solid white;
-                padding: 15px 30px;
-                width: fit-content;
-                border-radius: 50%;
-                margin: -30px 0 0 -30px;
-                position: absolute;
-                z-index: 1;
-                background-color: #002087;
+                border: 3px solid custom.$primaryWhite;
+                background-color: map-get($theme-colors, "primary" );
         
                 h1, h3{
-                    color: white;
+                    color: custom.$primaryWhite;
                     span{
                         font-size: 18px
                     }
@@ -37,10 +26,10 @@
             }
         }        
         .card-body{
-            background-color: #C3CEE7;            
+            background-color: map-get($theme-colors, "blue" );            
             .card-subtitle{
                 font-size: 16px;
-                color: #002087;
+                color: map-get($theme-colors, "primary" );
             }
             .card-title{
                 font-size: 22px;
@@ -55,16 +44,12 @@
 
     @media only screen and (max-width: 1025px){
         .Card{
-            margin: 40px 40px !important;              
-
             .card{
                 width: 250px;
                 height: fit-content;
                 margin: 40px 0 0 40px;
 
                 .DateContainer{
-                    padding: 15px 30px;
-            
                     h1, h3{
                         font-size: 32px !important;
                         span{
@@ -83,18 +68,12 @@
 
     @media only screen and (max-width: 769px){
         .Card{
-            margin: 40px 30px !important;     
-            grid-template-columns: 50% 50% ;  
-            gap: 5px; 
-            
             .card{
                 width: 300px !important;
                 height: fit-content;
                 margin: 40px 0 0 30px;
 
                 .DateContainer{
-                    padding: 10px 25px;
-            
                     h1, h3{
                         font-size: 28px !important;
                         span{
@@ -118,16 +97,11 @@
     }
 
     @media only screen and (max-width: 426px){ 
-        .Card{    
-            margin: 40px 0 !important;
-            grid-template-columns: 100%;   
+        .Card{       
             .card{
                 width: 90vw !important;
                 height: fit-content;
-                margin: 40px 0 0 20px;
-                .DateContainer{
-                    margin: -20px 0 0 -10px;
-                } 
+                margin: 40px 0 0 20px; 
             }
             .card-body{                
                 .card-subtitle{
@@ -169,7 +143,7 @@
     width: 95vw;
     margin: 20px 20px 0  20px;
     border-radius: 20px 20px 0 0  !important;
-    background-color: #C3CEE7;
+    background-color: map-get($theme-colors, "blue" );
     padding: 0 20px;
     .modal-header{
         .modal-title{

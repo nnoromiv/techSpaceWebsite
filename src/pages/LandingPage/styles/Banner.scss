@@ -1,13 +1,11 @@
+@use "../../../custom";
+@import "../../../custom";
+
 .Banner{
-    background-color: #C3CEE7;
-    padding: 40px 100px;
-    display: flex;
-    justify-content: space-between;
+    background-color: map-get($theme-colors, "blue" );
     h1{
-        font-size: 40px;
-        font-weight: 800;
         span{
-            color: #002087;
+            color: map-get($theme-colors, "primary" );
         }
     }
     Button{
@@ -15,38 +13,14 @@
         margin: 40px 0 0 0;
     }
 
-    @media only screen and (max-width: 1025px){
-        padding: 40px 80px;
-    }
 
     @media only screen and (max-width: 768px){
-        padding: 40px 50px;
-
-        h1{
-            font-size: 36px;
-        }
-
         Button{
             margin: 20px 0 0 0;
         }
     }
 
-    @media only screen and (max-width: 600px){
-        padding: 40px 30px;
-
-        h1{
-            font-size: 30px;
-        }
-    }
-
     @media only screen and (max-width: 426px){
-        padding: 40px 20px;
-        flex-direction: column;
-
-        h1{
-            font-size: 24px;
-        }
-
         Button{
             margin: 10px 0 0 0;
             font-size: 12px;

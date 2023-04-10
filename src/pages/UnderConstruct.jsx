@@ -11,16 +11,13 @@ const StyledPage = styled.div`
 const StyledImage = styled.img`
     width: 100vw;
     height: 70vh;
-    background-color: #F4FAFF;
-    color: #F4FAFF;
-    background: #F4FAFF;
 `;
 
 const StyledHText = styled.h1`
     margin: 10px 0 0 0;
     font-size: 2em;
     color: #d3d3d3;
-`
+`;
 
 const UnderConstruct = (props) => {
     return(
