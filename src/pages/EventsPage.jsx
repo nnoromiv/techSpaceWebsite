@@ -8,7 +8,7 @@ import EventCards from './EventsPage/EventCards';
 
 const EventsPage = () => {
   return (
-    <div className="EventsPage">
+    <header className="EventsPage">
         <Navbar />
         {/* Main Body */}
             <EventBody />
@@ -17,7 +17,7 @@ const EventsPage = () => {
         <FAQ />
         <Banner />
         <Footer />
-    </div>
+    </header>
   )
 }
 

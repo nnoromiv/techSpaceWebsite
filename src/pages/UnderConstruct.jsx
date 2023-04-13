@@ -21,13 +21,13 @@ const StyledHText = styled.h1`
 
 const UnderConstruct = (props) => {
     return(
-        <>
+        <header>
         <Navbar />
         <StyledPage className="ConstructionHandler">
             <StyledHText>{props.Name} is under construction</StyledHText>
             <StyledImage src="images/page_construction.svg" srcSet="" alt="underConstruction" />
         </StyledPage>
-        </>
+        </header>
     )
 }
 

@@ -11,7 +11,7 @@ import Footer from './LandingPage/Footer';
 
 function LandingPage() {
   return (
-    <div className="LandingPage">
+    <header className="LandingPage">
       <Navbar />
       <Content />
       <MyCarousel />
@@ -22,7 +22,7 @@ function LandingPage() {
       <FAQ />
       <Banner />
       <Footer />
-    </div>
+    </header>
   );
 }
 

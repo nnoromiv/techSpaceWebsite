@@ -7,7 +7,7 @@ import BlogBody from './BlogPage/BlogBody';
 
 const BlogPage = () => {
   return (
-    <div className="BlogPage">
+    <header className="BlogPage">
         <Navbar />
         {/* Main Body */}
            <BlogBody />
@@ -15,7 +15,7 @@ const BlogPage = () => {
         <FAQ />
         <Banner />
         <Footer />
-    </div>
+    </header>
   )
 }
 
