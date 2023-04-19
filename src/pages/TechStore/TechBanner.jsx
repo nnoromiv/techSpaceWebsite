@@ -1,5 +1,5 @@
 import React from 'react'
-import "./styles/TechStores.scss"
+import "./styles/TechBanner.scss"
 import styled from 'styled-components'
 
 const StoreBannerDiv = styled.div`
@@ -87,9 +87,9 @@ const CircularBands = (props) => {
     )
 }
 
-const TechStore = () => {
+const TechBanner = () => {
   return (
-    <header className="TechStore">
+    <header className="TechBanner">
         <StoreBannerDiv className="InnerBanner">
             <CircularBands OuterBand="BottomWhite" InnerBand="InnerBlue" />
             <FittextDiv id="Fittext">
@@ -104,4 +104,4 @@ const TechStore = () => {
   )
 }
 
-export default TechStore
+export default TechBanner

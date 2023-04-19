@@ -1,11 +1,10 @@
 @use "../../../custom";
 @import "../../../custom";
 
-.TechStore{
+.TechBanner{
     margin: 80px 40px 0;
     .InnerBanner{
         background-color: map-get( $theme-colors, "blue" );
-
         #BottomWhite{
             left: -200px;
             top: 200px;
@@ -18,13 +17,11 @@
                 }
             }
         }
-
         #Fittext {
             h1{
                 color: map-get($theme-colors, "primary" )
             }
         }
-
         #TopWhite{
             right: -200px;
             top: -250px;

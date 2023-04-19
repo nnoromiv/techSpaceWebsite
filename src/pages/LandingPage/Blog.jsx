@@ -141,7 +141,7 @@ function Cards(){
 
 const Blog = () => {
   return (
-    <div className='Blog' id='blog' style={{ margin: '80px 0 0 0'}}>
+    <header className='Blog' id='blog' style={{ margin: '80px 0 0 0'}}>
         <BlogHeader className='header'>
             <BlogHeaderH1>Blog</BlogHeaderH1>
             <BlogHeaderButton>
@@ -150,7 +150,7 @@ const Blog = () => {
         </BlogHeader>
         <CardP>Read up-to-date articles on scoops and latest trends happening around us.</CardP>
         <Cards />
-    </div>
+    </header>
   )
 }
 

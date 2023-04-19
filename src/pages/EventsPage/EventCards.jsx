@@ -3,7 +3,7 @@ import { Card, Button, Form, Modal } from 'react-bootstrap'
 import "./styles/EventCards.scss"
 import styled from 'styled-components'
 
-const EventCard = styled.div`
+const EventCard = styled.header`
         margin: 40px 50px !important;
         display: grid;
         grid-template-columns: 30% 30% 30%;
@@ -165,9 +165,9 @@ function Cards(){
 
 const EventCards = () => {
   return (
-    <div className='EventCards' id='blog' style={{ margin: '80px 0 0 0'}}>
+    <header className='EventCards' id='blog' style={{ margin: '80px 0 0 0'}}>
         <Cards />
-    </div>
+    </header>
   )
 }
 

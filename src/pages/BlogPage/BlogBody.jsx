@@ -35,7 +35,7 @@ const BlogBody = () => {
     }, [setBlogs, setBlogError]);
       
   return (
-    <div className='BlogBody'>
+    <header className='BlogBody'>
     {
         (blogError !== 200 || blogs.length === 0) 
         &&
@@ -57,7 +57,7 @@ const BlogBody = () => {
             </Card>
         ))
     }
-    </div>
+    </header>
   )
 }
 

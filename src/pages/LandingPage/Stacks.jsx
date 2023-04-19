@@ -3,7 +3,7 @@ import { MyButton } from './Content'
 import { Icon } from '@iconify/react';
 import styled from 'styled-components';
 
-const StacksDiv = styled.div`
+const StacksHeader = styled.header`
     margin: 80px 100px 0 100px;
     text-align: center;
     @media only screen and (max-width: 1025px){
@@ -293,14 +293,14 @@ const CybersecurityStack = () => {
 
 const Stacks = () => {
   return (
-    <StacksDiv className='Stacks' id='about-stacks'>
+    <StacksHeader className='Stacks' id='about-stacks'>
         <h1>Stacks</h1>
         <FrontendStack />
         <UIUXStack />
         <BackendStack />
         <DataScienceStack />
         <CybersecurityStack />
-    </StacksDiv>
+    </StacksHeader>
   )
 }
 

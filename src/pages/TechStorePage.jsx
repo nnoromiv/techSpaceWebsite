@@ -1,5 +1,5 @@
 import React from 'react'
-import TechStore from './TechStore/TechStore'
+import TechBanner from './TechStore/TechBanner'
 import Navbar from './LandingPage/Navbar'
 import FAQ from './LandingPage/FAQ'
 import Footer from './LandingPage/Footer'
@@ -10,7 +10,7 @@ const TechStorePage = () => {
     <header>
     <Navbar />
     {/* Main Body */}
-      <TechStore />
+      <TechBanner />
     {/* Body Ends */}
     <FAQ />
     <Footer />      

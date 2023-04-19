@@ -2,7 +2,7 @@ import React from 'react'
 import "./styles/Partners.scss"
 import styled from 'styled-components'
 
-const PartnersDiv = styled.div`
+const PartnersHeader = styled.header`
     margin: 100px 0 0 0;
     padding: 50px 100px;
     display: flex;
@@ -63,13 +63,13 @@ const PartnerLogoImage = styled.img`
 
 const Partners = () => {
   return (
-    <PartnersDiv className='Partners'>
+    <PartnersHeader className='Partners'>
         <PartnerH1>Our partners</PartnerH1>
         <PartnerLogoDiv className='PartnersLogo'>
             <PartnerLogoImage alt='' srcSet='' src='images/RUNALUMNI.png' />
             <PartnerLogoImage alt='' srcSet='' src='images/HOSITECH.png' />
         </PartnerLogoDiv>
-    </PartnersDiv>
+    </PartnersHeader>
   )
 }
 

@@ -3,7 +3,7 @@ import { MyButton } from './Content'
 import "./styles/Aboutus.scss"
 import styled from 'styled-components'
 
-const AboutUsDiv = styled.div`
+const AboutUsHeader = styled.header`
     margin: 80px 0 0 0;
     padding: 0 50px;
     display: flex;
@@ -113,7 +113,7 @@ const WhoWeAreP = styled.p`
 
 const Aboutus = () => {
   return (
-    <AboutUsDiv className='Aboutus'>
+    <AboutUsHeader className='Aboutus'>
         <AboutUsImage src='images/tempimg.png' alt='about-us' srcSet='' />
         <WhoWeAreDiv className='Whoweare'>
             <WhoWeAreH2>Who are we?</WhoWeAreH2>
@@ -124,7 +124,7 @@ const Aboutus = () => {
             </WhoWeAreP>
             <MyButton Innertext='Get started' />
         </WhoWeAreDiv>
-    </AboutUsDiv>
+    </AboutUsHeader>
   )
 }
 

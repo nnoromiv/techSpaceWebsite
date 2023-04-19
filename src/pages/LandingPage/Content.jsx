@@ -3,7 +3,7 @@ import { Button } from 'react-bootstrap'
 import "./styles/Content.scss"
 import styled from 'styled-components'
 
-const ContentDiv = styled.div`
+const ContentHeader = styled.header`
   text-align: center;
   padding: 20px 0 0 0;
 
@@ -63,14 +63,14 @@ export const MyButton = (props) => {
 
 const Content = () => {
   return (
-    <ContentDiv className='Content' id="contact">
+    <ContentHeader className='Content' id="contact">
         <ContentH1>Tech for the <span>young</span></ContentH1>
         <ContentP>
         The aim of tech education for young people is to prepare them for a world that is increasingly driven by technology<br />
         we equips young people with the tools and knowledge they need to thrive in a rapidly evolving digital landscape.
         </ContentP>
         <MyButton Innertext='Get started' />
-    </ContentDiv>
+    </ContentHeader>
   )
 }
 

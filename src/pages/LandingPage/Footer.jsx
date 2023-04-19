@@ -6,7 +6,7 @@ import { Nav } from 'react-bootstrap'
 import { SECONDARYNAVBARMENU } from './Navbar'
 import styled from 'styled-components';
 
-const FooterHeadDiv = styled.div`
+const FooterHeader = styled.div`
     margin: 10px 0 0 0;
     padding: 40px;
     align-items: center;
@@ -125,7 +125,7 @@ const SOCIALS = [
 
 function Socials(){
     return (
-        <div id='nav-socials' >
+        <header id='nav-socials' >
         {
         SOCIALS.map((social) => {
             return (
@@ -137,13 +137,13 @@ function Socials(){
             )
         })
         }
-        </div>
+        </header>
     )
 }
 
 const FooterHead = () => {
     return(
-        <FooterHeadDiv className='FooterHead'>
+        <FooterHeader className='FooterHead'>
         <GridFooterHeadDiv>
             <GetintouchDiv className='Getintouch'>
                 <div>
@@ -174,7 +174,7 @@ const FooterHead = () => {
                     <Button>Subscribe</Button>
                 </div>
         </GridFooterHeadDiv>
-    </FooterHeadDiv>
+    </FooterHeader>
     )
 }
 
@@ -224,10 +224,10 @@ const FooterTail = () => {
 
 const Footer = () => {
   return (
-    <>
+    <header>
         <FooterHead />
         <FooterTail />
-    </>
+    </header>
   )
 }
 

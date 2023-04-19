@@ -4,7 +4,7 @@ import { Accordion } from 'react-bootstrap'
 import "./styles/FAQ.scss"
 import styled from 'styled-components'
 
-const FAQDiv = styled.div`
+const FAQHeader = styled.header`
     margin: 80px 0 0 0;
     padding: 50px 0 80px 0;
     text-align: center;
@@ -87,11 +87,11 @@ function MyAccordion (){
 
 const FAQ = () => {
   return (
-    <FAQDiv className='FAQ' id='FAQ'>
+    <FAQHeader className='FAQ' id='FAQ'>
         <FAQH1>Frequently Asked Questions</FAQH1>
         <Divider variant='middle' color='black'/>
         <MyAccordion />
-    </FAQDiv>
+    </FAQHeader>
   )
 }
 

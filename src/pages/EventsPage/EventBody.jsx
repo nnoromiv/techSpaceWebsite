@@ -41,7 +41,7 @@ function EventBody() {
         setShow(true)
     }
   return (
-    <div className='EventBody'>
+    <header className='EventBody'>
         <DateContainerDiv className='DateContainer'>
             <h1>17<span>th</span></h1>
             <h3>May</h3>
@@ -93,7 +93,7 @@ function EventBody() {
                 <Button id="TicketCheckoutButton">Get Ticket</Button>
             </Modal.Body>
     </Modal>
-    </div>
+    </header>
     
   )
 }

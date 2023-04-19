@@ -3,7 +3,7 @@ import { Button } from 'react-bootstrap'
 import "./styles/Banner.scss"
 import styled from 'styled-components'
 
-const BannerDiv = styled.div`
+const BannerHeader = styled.header`
     padding: 40px 100px;
     display: flex;
     justify-content: space-between;
@@ -39,10 +39,10 @@ const BannerH1 = styled.h1`
 
 const Banner = () => {
   return (
-    <BannerDiv className='Banner'>
+    <BannerHeader className='Banner'>
         <BannerH1> Ready to dive in ? <br /> <span>Become a member today</span></BannerH1>
         <Button>Become a member</Button>
-    </BannerDiv>
+    </BannerHeader>
   )
 }
 
