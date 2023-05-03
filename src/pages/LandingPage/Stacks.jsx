@@ -1,4 +1,3 @@
-import React from 'react'
 import { MyButton } from './Content'
 import { Icon } from '@iconify/react';
 import styled from 'styled-components';
@@ -194,15 +193,15 @@ const STACKDESC = [
 const FrontendStack = () => {
     return(
         <StackedRow className='Frontend'>
-            <FrontendStackImage alt='frontend' srcSet='' src='images/frontend.svg' />
+            <FrontendStackImage alt='frontend' srcSet='' src='frontend.svg' />
             <div className='info'>
                 <div style={{display: 'flex'}}>
                     <Icon icon="ic:twotone-library-add-check" color="#002087" width="34" height="34" />
                     <StackRowH2>Frontend Development Stack</StackRowH2>
                 </div>
                 {
-                    STACKDESC.slice(0,1).map( fd => (
-                        <StackRowP>{fd.desc.slice(0,390)}.....</StackRowP>
+                    STACKDESC.slice(0,1).map( (fd, index) => (
+                        <StackRowP key={index}>{fd.desc.slice(0,390)}.....</StackRowP>
                     ))
                 }
                 <MyButton Innertext='View more'/>
@@ -214,15 +213,15 @@ const FrontendStack = () => {
 const UIUXStack = () => {
     return(
         <StackedRowReversed className='UIUX'>
-            <UIUXStackImage alt='UIUX' srcSet='' src='images/uiux.svg' />
+            <UIUXStackImage alt='UIUX' srcSet='' src='uiux.svg' />
             <div className='info'>
                 <div style={{display: 'flex'}}>
                     <Icon icon="ic:twotone-library-add-check" color="#002087" width="34" height="34" />
                     <StackRowH2>UIUX Development Stack</StackRowH2>
                 </div>
                 {
-                    STACKDESC.slice(1,2).map( uiux => (
-                        <StackRowP>{uiux.desc.slice(0,390)}.....</StackRowP>
+                    STACKDESC.slice(1,2).map( (uiux, index) => (
+                        <StackRowP key={index}>{uiux.desc.slice(0,390)}.....</StackRowP>
                     ))
                 }                
                 <MyButton Innertext='View more'/>
@@ -234,15 +233,15 @@ const UIUXStack = () => {
 const BackendStack = () => {
     return(
         <StackedRow className='Backend'>
-            <BackendStackImage alt='backend' srcSet='' src='images/backend.svg' />
+            <BackendStackImage alt='backend' srcSet='' src='backend.svg' />
             <div className='info'>
                 <div style={{display: 'flex'}}>
                     <Icon icon="ic:twotone-library-add-check" color="#002087" width="34" height="34" />
                     <StackRowH2>Backend Development Stack</StackRowH2>
                 </div>
                 {
-                    STACKDESC.slice(2,3).map( bd => (
-                        <StackRowP>{bd.desc.slice(0,380)}.....</StackRowP>
+                    STACKDESC.slice(2,3).map( (bd, index) => (
+                        <StackRowP key={index}>{bd.desc.slice(0,380)}.....</StackRowP>
                     ))
                 }
                 <MyButton Innertext='View more'/>
@@ -254,15 +253,15 @@ const BackendStack = () => {
 const DataScienceStack = () => {
     return(
         <StackedRowReversed className='DataScience'>
-            <DataScienceStackImage alt='DataScience' srcSet='' src='images/datascience.svg' />
+            <DataScienceStackImage alt='DataScience' srcSet='' src='datascience.svg' />
             <div className='info'>
                 <div style={{display: 'flex'}}>
                     <Icon icon="ic:twotone-library-add-check" color="#002087" width="34" height="34" />
                     <StackRowH2>Data Science Stack</StackRowH2>
                 </div>
                 {
-                    STACKDESC.slice(3,4).map( ds => (
-                        <StackRowP>{ds.desc.slice(0,390)}.....</StackRowP>
+                    STACKDESC.slice(3,4).map( (ds, index) => (
+                        <StackRowP key={index}>{ds.desc.slice(0,390)}.....</StackRowP>
                     ))
                 }                
                 <MyButton Innertext='View more'/>
@@ -274,15 +273,15 @@ const DataScienceStack = () => {
 const CybersecurityStack = () => {
     return(
         <StackedRow className='Cybersecurity'>
-            <CybersecurityStackImage alt='Cybersecurity' srcSet='' src='images/cybersecurity.svg' />
+            <CybersecurityStackImage alt='Cybersecurity' srcSet='' src='cybersecurity.svg' />
             <div className='info'>
                 <div style={{display: 'flex'}}>
                     <Icon icon="ic:twotone-library-add-check" color="#002087" width="34" height="34" />
                     <StackRowH2>Cybersecurity Stack</StackRowH2>
                 </div>
                 {
-                    STACKDESC.slice(4,5).map( cs => (
-                        <StackRowP>{cs.desc.slice(0,390)}.....</StackRowP>
+                    STACKDESC.slice(4,5).map( (cs, index) => (
+                        <StackRowP key={index}>{cs.desc.slice(0,390)}.....</StackRowP>
                     ))
                 }                
                 <MyButton Innertext='View more'/>

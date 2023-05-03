@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import {useState} from 'react'
 import { Button, Carousel, Form, Modal } from 'react-bootstrap'
 import './styles/EventBody.scss'
 import styled from 'styled-components'
@@ -37,7 +37,7 @@ function EventBody() {
     const [ticketNumber, setTicketNumber] = useState(1);
     const [show, setShow] = useState(false)
 
-    function handler(breakpoint){
+    function handler(){
         setShow(true)
     }
   return (

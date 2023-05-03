@@ -1,10 +1,11 @@
 import Button from 'react-bootstrap/Button'
-import React from 'react'
 import "./styles/Navbar.scss"
 import { Divider } from '@mui/material'
 import { Nav, NavDropdown } from 'react-bootstrap'
 import { slide as Menu } from 'react-burger-menu'
 import styled from 'styled-components'
+import PropTypes from 'prop-types';
+import {SECONDARYNAVBARMENU} from '../../Constants'
 
 const LogoImg = styled.img`
     width: 144px;
@@ -36,7 +37,7 @@ const AuthButtonDiv =styled.div`
 
 const Logo = () => {
     return (
-        <LogoImg src='images/Logo.png' alt="logo" srcSet="" />
+        <LogoImg src='logo.svg' alt="logo" srcSet="" />
     )
 }
 
@@ -66,65 +67,6 @@ const HamBurgerMenu = () => {
         </div>
     )
 }
-
-export const SECONDARYNAVBARMENU = [
-    {
-        href: '/',
-        link: 'Home'
-    },
-    {
-        href: '/tech-store',
-        link: 'Tech store'
-    },
-    {
-        href: '/ai-data-science',
-        link: 'AI/Data Science'
-    },
-    {
-        href: '/backend',
-        link: 'Backend Development'
-    },
-    {
-        href: '/cybersecurity',
-        link: 'Cybersecurity'
-    },
-    {
-        href: '/frontend',
-        link: 'Frontend Development'
-    },
-    {
-        href: '/UIUX',
-        link: 'UI/UX Development'
-    },
-    {
-        href: '/blogs',
-        link: 'Blogs'
-    },
-    {
-        href: '/events',
-        link: 'Events'
-    },
-    {
-        href: '/gallery',
-        link: 'Gallery'
-    },
-    {
-        href: '/about-us',
-        link: 'About us'
-    },
-    {
-        href: '#FAQ',
-        link: 'FAQ'
-    },
-    {
-        href: '#about-stacks',
-        link: 'About Stacks'
-    },
-    {
-        href: '#contact',
-        link: 'Contact'
-    },
-]
 
 const SecondaryNavbar = (props) => {
     return (
@@ -164,6 +106,10 @@ const SecondaryNavbar = (props) => {
         }
         </Nav>
     )
+}
+
+SecondaryNavbar.propTypes = {
+    className: PropTypes.string
 }
 
 const Navbar = () => {

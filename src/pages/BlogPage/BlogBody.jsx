@@ -1,9 +1,10 @@
-import React, { useContext, useEffect } from 'react'
+import { useContext, useEffect } from 'react'
 import { Button, Card } from 'react-bootstrap'
 import './styles/BlogBody.scss'
 import { EndPointContext } from '../../App';
 import { FetchBlogs } from '../../EndpointCalls';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const ErrorHandlerDiv = styled.div`
     display: flex;
@@ -14,10 +15,14 @@ const ErrorHandlerDiv = styled.div`
 export const ErrorHandler = (props) => {
     return(
         <ErrorHandlerDiv className="ErrorHandler">
-            <img src="images/under_construction.svg" srcSet="" alt="underConstruction" />
-            <h1>{props.Name} is on it's way</h1>
+            <img src="under_construction.svg" srcSet="" alt="underConstruction" />
+            <h1>{props.Name} is on it&apos;s way</h1>
         </ErrorHandlerDiv>
     )
+}
+
+ErrorHandler.propTypes = {
+    Name: PropTypes.string
 }
 
 const BlogBody = () => { 
@@ -42,9 +47,9 @@ const BlogBody = () => {
         <ErrorHandler Name='Blog' />
     }
     {  
-        blogs.map(data => (
+        blogs.map((data, index) => (
             data === [] ?
-            <ErrorHandler Name='Blog' />
+            <ErrorHandler key={index} Name='Blog' />
             :
             <Card key={data._id}>
                 <Card.Img src="https://image-processor-storage.s3.us-west-2.amazonaws.com/images/3cf61c1011912a2173ea4dfa260f1108/halo-of-neon-ring-illuminated-in-the-stunning-landscape-of-yosemite.jpg" variant='top' />

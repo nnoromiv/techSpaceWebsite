@@ -1,5 +1,4 @@
 import { Divider } from '@mui/material'
-import React from 'react'
 import { Accordion } from 'react-bootstrap'
 import "./styles/FAQ.scss"
 import styled from 'styled-components'
@@ -64,7 +63,7 @@ const ACCORDION = [
     },
 ]
 
-function MyAccordion (){
+const MyAccordion = () => {
     return(
         <Accordion>
             {
@@ -95,4 +94,5 @@ const FAQ = () => {
   )
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export default FAQ

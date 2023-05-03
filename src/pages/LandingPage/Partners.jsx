@@ -1,4 +1,3 @@
-import React from 'react'
 import "./styles/Partners.scss"
 import styled from 'styled-components'
 
@@ -66,8 +65,8 @@ const Partners = () => {
     <PartnersHeader className='Partners'>
         <PartnerH1>Our partners</PartnerH1>
         <PartnerLogoDiv className='PartnersLogo'>
-            <PartnerLogoImage alt='' srcSet='' src='images/RUNALUMNI.png' />
-            <PartnerLogoImage alt='' srcSet='' src='images/HOSITECH.png' />
+            <PartnerLogoImage alt='' srcSet='' src='runalumni.png' />
+            <PartnerLogoImage alt='' srcSet='' src='hositech.png' />
         </PartnerLogoDiv>
     </PartnersHeader>
   )

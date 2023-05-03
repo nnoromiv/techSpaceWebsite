@@ -1,6 +1,6 @@
-import React from 'react'
 import styled from 'styled-components';
 import Navbar from './LandingPage/Navbar';
+import PropTypes from 'prop-types'
 
 const StyledPage = styled.div`
     display: 'flex';
@@ -25,10 +25,14 @@ const UnderConstruct = (props) => {
         <Navbar />
         <StyledPage className="ConstructionHandler">
             <StyledHText>{props.Name} is under construction</StyledHText>
-            <StyledImage src="images/page_construction.svg" srcSet="" alt="underConstruction" />
+            <StyledImage src="page_construction.svg" srcSet="" alt="underConstruction" />
         </StyledPage>
         </header>
     )
+}
+
+UnderConstruct.propTypes = {
+    Name : PropTypes.string.isRequired
 }
 
 export default UnderConstruct

@@ -1,12 +1,12 @@
-import React, {useContext, useEffect} from 'react'
+import {useContext, useEffect} from 'react'
 import { Card, Button } from 'react-bootstrap'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./styles/Blog.scss"
 import { EndPointContext } from '../../App';
-import { ErrorHandler } from '../BlogPage/BlogBody';
-import { FetchBlogs } from '../../EndpointCalls';
+import { ErrorHandler } from '../BlogPage/BlogBody.jsx';
+import { FetchBlogs } from '../../EndpointCalls.jsx';
 import styled from 'styled-components';
 
 const BlogHeader = styled.div`
@@ -118,12 +118,12 @@ function Cards(){
             }
             <Slider {...SLIDERSETTINGS}>
             {  
-                blogs.slice(0,4).map(data => (
+                blogs.slice(0,4).map((data, index) => (
                   data === [] ?
-                    <ErrorHandler Name='Blog' />
+                    <ErrorHandler key={index} Name='Blog' />
                     :
                     <Card key={data._id}>
-                        <Card.Img variant='top' src='images/blogimg.png'/>
+                        <Card.Img variant='top' src='blogimg.png'/>
                         <Card.Body>
                             <Card.Subtitle>{data.text}</Card.Subtitle>
                             <Card.Title>{data.title}</Card.Title>

@@ -1,5 +1,4 @@
-import React from 'react'
-import UnderConstruct from './UnderConstruct'
+import UnderConstruct from './UnderConstruct.jsx'
 
 const GalleryPage = () => {
   return (

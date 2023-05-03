@@ -1,4 +1,3 @@
-import React from 'react'
 import { MyButton } from './Content'
 import "./styles/Aboutus.scss"
 import styled from 'styled-components'
@@ -114,7 +113,7 @@ const WhoWeAreP = styled.p`
 const Aboutus = () => {
   return (
     <AboutUsHeader className='Aboutus'>
-        <AboutUsImage src='images/tempimg.png' alt='about-us' srcSet='' />
+        <AboutUsImage src='tempimg.png' alt='about-us' srcSet='' />
         <WhoWeAreDiv className='Whoweare'>
             <WhoWeAreH2>Who are we?</WhoWeAreH2>
             <WhoWeAreP>

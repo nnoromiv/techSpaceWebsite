@@ -1,6 +1,6 @@
-import React from 'react'
 import "./styles/TechBanner.scss"
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
 const StoreBannerDiv = styled.div`
     display: flex;
@@ -87,6 +87,11 @@ const CircularBands = (props) => {
     )
 }
 
+CircularBands.propTypes = {
+    OuterBand : PropTypes.string.isRequired,
+    InnerBand : PropTypes.string.isRequired
+}
+
 const TechBanner = () => {
   return (
     <header className="TechBanner">
@@ -97,7 +102,7 @@ const TechBanner = () => {
                 <FittextP>Our fits are stylish  and comfortable they make you<br />
                     feel and look your best</FittextP>
             </FittextDiv>
-            <UniqueImage src="images/slant_unique_fits.png" alt="Unique Fit" srcSet="" />
+            <UniqueImage src="slant_unique_fits.png" alt="Unique Fit" srcSet="" />
             <CircularBands OuterBand="TopWhite" InnerBand="InnerBlue" />
         </StoreBannerDiv>
     </header>

@@ -1,7 +1,7 @@
-import React from 'react'
 import { Button } from 'react-bootstrap'
 import "./styles/Content.scss"
 import styled from 'styled-components'
+import PropTypes from 'prop-types';
 
 const ContentHeader = styled.header`
   text-align: center;
@@ -60,6 +60,10 @@ export const MyButton = (props) => {
     <Button>{props.Innertext}</Button>
   )
 }
+
+MyButton.propTypes = {
+    Innertext: PropTypes.string.isRequired,
+};
 
 const Content = () => {
   return (

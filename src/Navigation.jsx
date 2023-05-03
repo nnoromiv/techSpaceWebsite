@@ -1,11 +1,11 @@
 import { createBrowserRouter } from 'react-router-dom';
 import './App.scss'
-import AboutUsPage from './pages/AboutUsPage';
+import AboutUsPage from './pages/AboutUsPage.jsx';
 import BlogPage from './pages/BlogPage';
-import EventsPage from './pages/EventsPage';
-import GalleryPage from './pages/GalleryPage';
+import EventsPage from './pages/EventsPage.jsx';
+import GalleryPage from './pages/GalleryPage.jsx';
 import LandingPage from './pages/LandingPage';
-import TechStorePage from './pages/TechStorePage';
+import TechStorePage from './pages/TechStorePage.jsx';
 
 export const SignedOutPages = createBrowserRouter([
   {

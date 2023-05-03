@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import {useEffect, useState} from 'react'
 import { Card, Button, Form, Modal } from 'react-bootstrap'
 import "./styles/EventCards.scss"
 import styled from 'styled-components'
@@ -51,25 +51,25 @@ const DateContainerDiv = styled.div`
 
 const BLOGCARD = [
     {
-        image: 'images/blogimg.png',
+        image: 'blogimg.png',
         price: '3000',
         title: 'Story Headline',
         shortText: 'Lorem ipsum dolor sit amet consectetur. Rhoncus ut dictum urna faucibus elit feugiat. Et dignissim in ut tellus vitae venenatis eget varius vestibulum.',
     },
     {
-        image: 'images/blogimg.png',
+        image: 'blogimg.png',
         price: '40000',
         title: 'Story Headline2',
         shortText: 'Lorem ipsum dolor sit amet consectetur. Rhoncus ut dictum urna faucibus elit feugiat. Et dignissim in ut tellus vitae venenatis eget varius vestibulum.',
     },
     {
-        image: 'images/blogimg.png',
+        image: 'blogimg.png',
         price: '9000',
         title: 'Story Headline3',
         shortText: 'Lorem ipsum dolor sit amet consectetur. Rhoncus ut dictum urna faucibus elit feugiat. Et dignissim in ut tellus vitae venenatis eget varius vestibulum.',
     },
     {
-        image: 'images/blogimg.png',
+        image: 'blogimg.png',
         price: '10000',
         title: 'Story Headline4',
         shortText: 'Lorem ipsum dolor sit amet consectetur. Rhoncus ut dictum urna faucibus elit feugiat. Et dignissim in ut tellus vitae venenatis eget varius vestibulum.',
@@ -123,7 +123,7 @@ function Cards(){
                                 ? 
                                 <div></div>
                                 :
-                                <Modal show={selectedEventIndex === idx} fullscreen scrollable onHide={()=> setSelectedEventIndex(null)}>
+                                <Modal show={selectedEventIndex === idx} fullScreen scrollable onHide={()=> setSelectedEventIndex(null)}>
                                 <Modal.Header closeButton>
                                     <Modal.Title>{selectedEvent.title}</Modal.Title>
                                 </Modal.Header>

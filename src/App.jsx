@@ -1,7 +1,7 @@
 import './App.scss';
 import { createContext, useState } from 'react'
 import { RouterProvider } from 'react-router-dom';
-import { SignedOutPages } from './Navigation';
+import { SignedOutPages } from './Navigation.jsx';
 
 export const EndPointContext = createContext()
 

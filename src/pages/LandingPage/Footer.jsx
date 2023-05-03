@@ -1,9 +1,8 @@
-import React from 'react'
 import "./styles/Footer.scss"
 import { Button, InputGroup } from 'react-bootstrap'
 import Form from 'react-bootstrap/Form';
 import { Nav } from 'react-bootstrap'
-import { SECONDARYNAVBARMENU } from './Navbar'
+import { SECONDARYNAVBARMENU } from '../../Constants'
 import styled from 'styled-components';
 
 const FooterHeader = styled.div`
