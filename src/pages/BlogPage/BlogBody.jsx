@@ -48,7 +48,7 @@ const BlogBody = () => {
     }
     {  
         blogs.map((data, index) => (
-            data === [] ?
+            data.length === 0 ?
             <ErrorHandler key={index} Name='Blog' />
             :
             <Card key={data._id}>

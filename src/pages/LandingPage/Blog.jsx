@@ -119,7 +119,7 @@ function Cards(){
             <Slider {...SLIDERSETTINGS}>
             {  
                 blogs.slice(0,4).map((data, index) => (
-                  data === [] ?
+                  data.length === 0 ?
                     <ErrorHandler key={index} Name='Blog' />
                     :
                     <Card key={data._id}>
