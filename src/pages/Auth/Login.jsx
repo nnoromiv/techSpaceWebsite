@@ -51,7 +51,7 @@ export const FormAreaH1 = styled.h1`
 `
 export const FormAreaH2 = styled.h2`
     text-align: center;
-    margin: 20% 0 0 0;
+    margin: 15% 0 0 0;
     font-weight: 200;
     font-size: 20px;
 
@@ -62,11 +62,11 @@ export const FormAreaH2 = styled.h2`
     }
 
     @media screen and (max-width: 376px) {
-        margin-top: 15%;
+        margin-top: 12%;
         font-size: 16px;  
     }
 `
-export const FormAreaSpan = styled.span`
+export const FormAreaA = styled.a`
     color: #002087;
     text-decoration: underline;
     font-weight: 500;
@@ -121,7 +121,7 @@ const FormArea = () => {
                 </Form>
             )}
             </Formik>
-            <FormAreaH2>Don&apos;t have an account?<FormAreaSpan href='/signup'>Sign up</FormAreaSpan></FormAreaH2>
+            <FormAreaH2>Don&apos;t have an account?<FormAreaA href='/signup'>Sign up</FormAreaA></FormAreaH2>
         </FormAreaDiv>
     )
 }

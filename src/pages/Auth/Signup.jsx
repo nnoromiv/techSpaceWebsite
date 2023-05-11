@@ -3,7 +3,7 @@ import  HeroImage from '../../assets/heroimage.png'
 import { Field, Form, Formik } from "formik"
 import { Button } from "react-bootstrap"
 import * as Yup from 'yup'
-import { AuthImage, FormAreaDiv, FormAreaH1, FormAreaH2, FormAreaSpan } from "./Login"
+import { AuthImage, FormAreaDiv, FormAreaH1, FormAreaH2, FormAreaA } from "./Login"
 
 const ImageArea = () => {
     return(
@@ -46,7 +46,7 @@ const FormArea = () => {
                 </Form>
             )}
             </Formik>
-            <FormAreaH2>Already have an account?<FormAreaSpan href='/login'>Log In</FormAreaSpan></FormAreaH2>
+            <FormAreaH2>Already have an account?<FormAreaA href='/login'>Log In</FormAreaA></FormAreaH2>
         </FormAreaDiv>
     )
 }
