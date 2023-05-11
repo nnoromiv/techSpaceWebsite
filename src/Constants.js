@@ -1,4 +1,4 @@
-const BLOGURL = 'https://techspace-website-production.up.railway.app/blog/'
+const BLOGURL = 'https://techspace-backend.onrender.com/blog/'
 
 const HEADERS = new Headers({
     'Access-Control-Allow-Headers': 'X-Requested-With,content-type',

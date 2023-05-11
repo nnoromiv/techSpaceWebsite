@@ -3,10 +3,92 @@ import  HeroImage from '../../assets/heroimage.png'
 import { Field, Form, Formik } from "formik"
 import { Button } from "react-bootstrap"
 import * as Yup from 'yup'
+import styled from "styled-components"
+
+export const AuthImage = styled.img`
+    width: 50%;
+    object-fit: cover;
+    @media screen and (max-width: 769px) {
+        width: 45%;
+    }
+    @media screen and (max-width: 426px) {
+        display: none
+    }
+`
+export const FormAreaDiv =  styled.div`
+    padding: 40px 80px;
+    width: 50%;
+
+    @media screen and (max-width: 769px) {
+        padding: 40px 40px;
+        width: 55%;
+    }
+
+    @media screen and (max-width: 426px) {
+        padding: 40px;
+        width: 100%;
+    }
+`
+export const FormAreaH1 = styled.h1`
+    font-size: 40px !important;
+    margin: 0 0 40px 0;
+
+    @media screen and (max-width: 769px) {  
+        font-size: 30px;
+    }
+
+
+    @media screen and (max-width: 426px) {  
+        font-size: 30px;
+    }
+
+
+    @media screen and (max-width: 321px) {          
+        font-size: 33px !important;
+    }
+
+    
+`
+export const FormAreaH2 = styled.h2`
+    text-align: center;
+    margin: 20% 0 0 0;
+    font-weight: 200;
+    font-size: 20px;
+
+
+    @media screen and (max-width: 769px) {
+        margin-top: 10%;
+        font-size: 18px;  
+    }
+
+    @media screen and (max-width: 376px) {
+        margin-top: 15%;
+        font-size: 16px;  
+    }
+`
+export const FormAreaSpan = styled.span`
+    color: #002087;
+    text-decoration: underline;
+    font-weight: 500;
+    padding: 0 0 0 5px;
+    cursor: pointer;
+
+@media screen and (max-width: 769px) {
+    padding: 0 0 0 3px;
+}
+
+@media screen and (max-width: 426px) {
+    padding: 0 0 0 3px;
+}
+
+@media screen and (max-width: 376px) {
+    padding: 0 0 0 3px;
+}
+`
 
 const ImageArea = () => {
     return(
-        <img src={HeroImage} alt='runtechspace-image' srcSet="" />
+        <AuthImage src={HeroImage} alt='runtechspace-image' srcSet="" />
     )
 }
 
@@ -17,8 +99,8 @@ const LoginSchema = Yup.object().shape({
 
 const FormArea = () => {
     return(
-        <div className="FormArea">
-        <h1>Welcome back!</h1>
+        <FormAreaDiv className="FormArea">
+        <FormAreaH1>Welcome back!</FormAreaH1>
             <Formik initialValues={{
                 email: '',
                 password: ''
@@ -39,8 +121,8 @@ const FormArea = () => {
                 </Form>
             )}
             </Formik>
-            <h2>Don&apos;t have an account?<span href='/signup'>Sign up</span></h2>
-        </div>
+            <FormAreaH2>Don&apos;t have an account?<FormAreaSpan href='/signup'>Sign up</FormAreaSpan></FormAreaH2>
+        </FormAreaDiv>
     )
 }
 

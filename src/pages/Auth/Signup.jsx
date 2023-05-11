@@ -3,10 +3,11 @@ import  HeroImage from '../../assets/heroimage.png'
 import { Field, Form, Formik } from "formik"
 import { Button } from "react-bootstrap"
 import * as Yup from 'yup'
+import { AuthImage, FormAreaDiv, FormAreaH1, FormAreaH2, FormAreaSpan } from "./Login"
 
 const ImageArea = () => {
     return(
-        <img src={HeroImage} alt='runtechspace-image' srcSet="" />
+        <AuthImage src={HeroImage} alt='runtechspace-image' srcSet="" />
     )
 }
 
@@ -19,8 +20,8 @@ const LoginSchema = Yup.object().shape({
 
 const FormArea = () => {
     return(
-        <div className="FormArea">
-        <h1>Welcome, get started!</h1>
+        <FormAreaDiv className="FormArea">
+        <FormAreaH1>Welcome, get started!</FormAreaH1>
             <Formik initialValues={{
                 email: '',
                 matricNo : '',
@@ -45,8 +46,8 @@ const FormArea = () => {
                 </Form>
             )}
             </Formik>
-            <h2>Already have an account?<span href='/login'>Log In</span></h2>
-        </div>
+            <FormAreaH2>Already have an account?<FormAreaSpan href='/login'>Log In</FormAreaSpan></FormAreaH2>
+        </FormAreaDiv>
     )
 }
 

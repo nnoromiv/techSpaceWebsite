@@ -27,6 +27,7 @@ const PrimaryNavbarDiv = styled.div`
 
 const AuthButtonDiv =styled.div`
     height: 100%;
+    display: flex;
 
     @media only screen and (max-width: 693px){
         display: none;
@@ -44,12 +45,14 @@ const Logo = () => {
 
 const AuthButton = () => {
     return(
-        <AuthButtonDiv className='AuthButton'>
+        <AuthButtonDiv >
             <Button variant='primary' href='/signup'>Sign in</Button>
+            <div style={{ opacity: 0}}> 1 </div>
             <Button variant='outline-primary' href='/login'>Log in</Button> 
         </AuthButtonDiv>
     )
 }
+
 
 const PrimaryNavbar = () => {
     return(
@@ -66,8 +69,9 @@ const HamBurgerMenu = () => {
         <div className='HamBurgerMenu'>
             <Menu right width={'100%'} >
                 <SecondaryNavbar className='HamBurgerSecondaryNavbar' />
-                <div className='AuthButton'>
+                <div style={{ display: 'flex'}}>
                     <Button variant='primary' href='/signup'>Sign in</Button>
+                    <div style={{ opacity: 0}}> 1 </div>
                     <Button variant='outline-primary' href='/login'>Log in</Button> 
                 </div>
             </Menu>

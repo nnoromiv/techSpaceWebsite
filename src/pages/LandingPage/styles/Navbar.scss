@@ -3,8 +3,10 @@
 
 .PrimaryNavbar{
     .AuthButton{
+        display: flex;
+        justify-content: space-between;
         Button{
-            margin: 0 5px;
+            margin: 0 5px !important;
         }
     }
 
