@@ -46,7 +46,7 @@ const Logo = () => {
 const AuthButton = () => {
     return(
         <AuthButtonDiv >
-            <Button variant='primary' href='/signup'>Sign in</Button>
+            <Button variant='primary' href='/signup'>Sign up</Button>
             <div style={{ opacity: 0}}> 1 </div>
             <Button variant='outline-primary' href='/login'>Log in</Button> 
         </AuthButtonDiv>
@@ -70,7 +70,7 @@ const HamBurgerMenu = () => {
             <Menu right width={'100%'} >
                 <SecondaryNavbar className='HamBurgerSecondaryNavbar' />
                 <div style={{ display: 'flex'}}>
-                    <Button variant='primary' href='/signup'>Sign in</Button>
+                    <Button variant='primary' href='/signup'>Sign up</Button>
                     <div style={{ opacity: 0}}> 1 </div>
                     <Button variant='outline-primary' href='/login'>Log in</Button> 
                 </div>

@@ -51,7 +51,7 @@ export const FormAreaH1 = styled.h1`
 `
 export const FormAreaH2 = styled.h2`
     text-align: center;
-    margin: 15% 0 0 0;
+    margin: 10% 0 0 0;
     font-weight: 200;
     font-size: 20px;
 
