@@ -7,7 +7,7 @@ import Footer from './LandingPage/Footer'
 const TechStorePage = () => {
   return (
     <header>
-    <Navbar />
+    <Navbar navActive='/tech-store'/>
     {/* Main Body */}
       <TechBanner />
     {/* Body Ends */}

@@ -12,7 +12,7 @@ import Footer from './LandingPage/Footer';
 function LandingPage() {
   return (
     <header className="LandingPage">
-      <Navbar />
+      <Navbar navActive='/' />
       <Content />
       <MyCarousel />
       <Partners />

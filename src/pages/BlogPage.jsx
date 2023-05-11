@@ -7,7 +7,7 @@ import BlogBody from './BlogPage/BlogBody';
 const BlogPage = () => {
   return (
     <header className="BlogPage">
-        <Navbar />
+        <Navbar navActive='/blogs'/>
         {/* Main Body */}
            <BlogBody />
         {/* Body Ends */}

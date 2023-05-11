@@ -1,0 +1,130 @@
+.Signup{
+    height: 100vh;
+    overflow-y: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    img {
+        width: 50%;
+        object-fit: cover;
+    }
+    .FormArea{
+        padding: 40px 80px;
+        width: 50%;
+        h1{
+            font-size: 40px !important;
+            margin: 0 0 20px 0;
+        }
+
+        em{
+            font-weight: 500;
+        }
+
+        #email, #matricNo, #password, #confirmPassword{
+            border: 2px solid #7298EC;
+            border-radius: 4px;
+            padding: 10px;
+            margin: 0 0 10px 0;
+        }
+        #confirmPassword {
+            margin: 0 0 20px 0 !important;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 10% 0 0 0;
+            font-weight: 200;
+            font-size: 20px;
+
+            span {
+                color: #002087;
+                text-decoration: underline;
+                font-weight: 500;
+                padding: 0 0 0 5px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    @media screen and (max-width: 769px) {
+        img{
+            width: 45%;
+        }
+        .FormArea {
+            padding: 40px 40px;
+            width: 55%;
+            h1{
+                font-size: 30px;
+            }
+            
+            p{
+                font-size: 18px;
+            }
+            
+            #email, #password{
+                padding: 8px;
+            }
+            
+            h2{
+                margin-top: 10%;
+                font-size: 18px;                
+                span{
+                    padding: 0 0 0 3px;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 426px) {
+        height: 100%;
+        img{
+            display: none
+        }
+        .FormArea {
+            padding: 40px;
+            width: 100%;
+            h1{
+                font-size: 30px;
+            }
+            
+            p{
+                font-size: 18px;
+            }
+            
+            #email, #password{
+                padding: 8px;
+            }
+            
+            h2{
+                margin-top: 10%;
+                font-size: 18px;                
+                span{
+                    padding: 0 0 0 3px;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 376px) {
+        .FormArea {            
+            p{
+                font-size: 16px;
+            }
+            
+            h2{
+                margin-top: 15%;
+                font-size: 16px;                
+                span{
+                    padding: 0 0 0 3px;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 321px) {
+        .FormArea {
+            h1{
+                font-size: 33px !important;
+            }
+        }
+    }
+}

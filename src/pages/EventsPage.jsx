@@ -8,7 +8,7 @@ import EventCards from './EventsPage/EventCards.jsx';
 const EventsPage = () => {
   return (
     <header className="EventsPage">
-        <Navbar />
+        <Navbar navActive='/events'/>
         {/* Main Body */}
             <EventBody />
             <EventCards />

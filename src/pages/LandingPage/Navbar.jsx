@@ -6,6 +6,7 @@ import { slide as Menu } from 'react-burger-menu'
 import styled from 'styled-components'
 import PropTypes from 'prop-types';
 import {SECONDARYNAVBARMENU} from '../../Constants'
+import { useState } from 'react'
 
 const LogoImg = styled.img`
     width: 144px;
@@ -41,14 +42,20 @@ const Logo = () => {
     )
 }
 
+const AuthButton = () => {
+    return(
+        <AuthButtonDiv className='AuthButton'>
+            <Button variant='primary' href='/signup'>Sign in</Button>
+            <Button variant='outline-primary' href='/login'>Log in</Button> 
+        </AuthButtonDiv>
+    )
+}
+
 const PrimaryNavbar = () => {
     return(
         <PrimaryNavbarDiv className='PrimaryNavbar'>
         <Logo />
-        <AuthButtonDiv className='AuthButton'>
-            <Button variant='primary' >Sign in</Button>
-            <Button variant='outline-primary'>Log in</Button> 
-        </AuthButtonDiv>
+        <AuthButton />
         <HamBurgerMenu />
     </PrimaryNavbarDiv>
     )
@@ -60,8 +67,8 @@ const HamBurgerMenu = () => {
             <Menu right width={'100%'} >
                 <SecondaryNavbar className='HamBurgerSecondaryNavbar' />
                 <div className='AuthButton'>
-                    <Button variant='primary' >Sign in</Button>
-                    <Button variant='outline-primary'>Log in</Button> 
+                    <Button variant='primary' href='/signup'>Sign in</Button>
+                    <Button variant='outline-primary' href='/login'>Log in</Button> 
                 </div>
             </Menu>
         </div>
@@ -69,16 +76,15 @@ const HamBurgerMenu = () => {
 }
 
 const SecondaryNavbar = (props) => {
+    const [active, setActive] = useState(props.Active)
     return (
-        <Nav className={props.className}>
+        <Nav className={props.className} defaultActiveKey='/' activeKey={active} color='black'  onSelect={(selectedKey) => setActive(selectedKey)}>
         {
             SECONDARYNAVBARMENU.slice(0,2).map(navbarmenu => {
                 return(
-                    <Nav variant='tabs' activeKey='/' color='#C3CEE7' key={navbarmenu.href} >
-                        <Nav.Item>
-                            <Nav.Link href={navbarmenu.href} eventKey={navbarmenu.href}>{navbarmenu.link}</Nav.Link>
-                        </Nav.Item>
-                    </Nav>
+                    <Nav.Item key={navbarmenu.href}>
+                        <Nav.Link href={navbarmenu.href} eventKey={navbarmenu.href}>{navbarmenu.link}</Nav.Link>
+                    </Nav.Item>
                 )
             })
         }
@@ -96,11 +102,9 @@ const SecondaryNavbar = (props) => {
         {
             SECONDARYNAVBARMENU.slice(7,12).map(navbarmenu => {
                 return(
-                    <Nav variant='tabs' defaultActiveKey="/home" color='#C3CEE7' key={navbarmenu.href}>
-                        <Nav.Item>
-                            <Nav.Link href={navbarmenu.href}>{navbarmenu.link}</Nav.Link>
-                        </Nav.Item>
-                    </Nav>
+                    <Nav.Item key={navbarmenu.href}>
+                        <Nav.Link href={navbarmenu.href}>{navbarmenu.link}</Nav.Link>
+                    </Nav.Item>
                 )
             })
         }
@@ -109,17 +113,22 @@ const SecondaryNavbar = (props) => {
 }
 
 SecondaryNavbar.propTypes = {
-    className: PropTypes.string
+    className: PropTypes.string,
+    Active: PropTypes.string
 }
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <header>
         <PrimaryNavbar />
         <Divider variant="middle" color='#E5E7EB'/>
-        <SecondaryNavbar className='SecondaryNavbar' />
+        <SecondaryNavbar className='SecondaryNavbar' Active={props.navActive}/>
     </header>
   )
+}
+
+Navbar.propTypes = {
+    navActive: PropTypes.string
 }
 
 export default Navbar

@@ -6,6 +6,7 @@ import EventsPage from './pages/EventsPage.jsx';
 import GalleryPage from './pages/GalleryPage.jsx';
 import LandingPage from './pages/LandingPage';
 import TechStorePage from './pages/TechStorePage.jsx';
+import { LoginPage, SignupPage } from './pages/AuthPages';
 
 export const SignedOutPages = createBrowserRouter([
   {
@@ -31,5 +32,13 @@ export const SignedOutPages = createBrowserRouter([
   {
     path: 'about-us',
     element: (<AboutUsPage />)
+  },
+  {
+    path: 'login',
+    element: (<LoginPage />)
+  },
+  {
+    path: 'signup',
+    element: (<SignupPage />)
   }
 ])

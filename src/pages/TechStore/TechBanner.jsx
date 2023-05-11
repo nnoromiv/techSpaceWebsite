@@ -77,7 +77,7 @@ const UniqueImage = styled.img`
     }
 `
 
-const CircularBands = (props) => {
+export const CircularBands = (props) => {
     return (
         <OuterBand id={props.OuterBand}>
             <InnerBand id={props.InnerBand}>

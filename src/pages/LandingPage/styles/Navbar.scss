@@ -25,14 +25,18 @@
         .nav-link{
             color: custom.$primaryBlack;
         }
-        .active, .nav-pills .show > .nav-link {
-            background-color: map-get($theme-colors, "blue" );
+    }
+
+    .nav-item{
+        .nav-link{
+            color: custom.$primaryBlack;
+        }  
+        .active {
             color: map-get($theme-colors, "primary" );
-        }
+            font-weight: 600;
+        }      
     }
-    .nav-link{
-        color: custom.$primaryBlack;
-    }
+
     @media only screen and (max-width: 768px){
         font-size: 14px;
     }
@@ -48,14 +52,18 @@
         .nav-link{
             color: custom.$primaryBlack;
         }
-        .active, .nav-pills .show > .nav-link {
-            background-color: map-get($theme-colors, "blue" );
-            color: map-get($theme-colors, "primary" );
-        }
     }
-    .nav-link{
-        font-size: 20px;
-        color: custom.$primaryBlack;
+
+    .nav-item{
+        .nav-link{
+            font-size: 20px;
+            color: custom.$primaryBlack;
+            margin: 0 0 10px 0;
+        }  
+        .active {
+            color: map-get($theme-colors, "primary" );
+            font-weight: 600;
+        }      
     }
 }
 
@@ -98,7 +106,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* General sidebar styles */
 .bm-menu {
     background: custom.$backgroundColor;
-    padding: 2.5em 1.5em 0;
+    padding: 1em 1em 0;
     font-size: 1.15em;
 }
 
