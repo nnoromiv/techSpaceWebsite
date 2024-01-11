@@ -28,7 +28,7 @@ const GridFooterHeadDiv = styled.div`
         gap: 30px;
     }
 `
-const GetintouchDiv = styled.div`
+const GetInTouchDiv = styled.div`
     display: flex;
     flex-direction: column;
     gap: 100px;
@@ -144,7 +144,7 @@ const FooterHead = () => {
     return(
         <FooterHeader className='FooterHead'>
         <GridFooterHeadDiv>
-            <GetintouchDiv className='Getintouch'>
+            <GetInTouchDiv className='Getintouch'>
                 <div>
                     <H3>Want to become part of our team ?</H3>
                     <P>Get in touch</P>
@@ -156,7 +156,7 @@ const FooterHead = () => {
                         <P>Check out our stacks and<br /> courses</P>
                     </a>
                 </div>
-            </GetintouchDiv>
+            </GetInTouchDiv>
                 <div>
                     <P>Our Headquarter</P>
                     <H3>Redeemers University Ede,<br />Osun State, Nigeria</H3>
@@ -180,7 +180,7 @@ const FooterHead = () => {
 const FooterTail = () => {
     return(
         <FooterTailDiv className='FooterTail'>
-            <H2>© 2023</H2>
+            <H2>© 2024</H2>
            <div className='FooterMenu'>
            {
                 SECONDARYNAVBARMENU.slice(1,2).map(navbarmenu => {
